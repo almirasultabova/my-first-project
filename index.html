@@ -8,6 +8,9 @@
 <meta property="og:title" content="Альмира Султанова — Цифровой мастер">
 <meta property="og:description" content="Сайты, приложения и ИИ-агенты под ключ. Бесплатная консультация.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="almira.jpg">
+<meta property="og:url" content="https://almirasultabova.github.io/my-first-project/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234f46e5'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='white' font-size='13' font-weight='bold' font-family='sans-serif'%3EАС%3C/text%3E%3C/svg%3E">
 <style>
 /* ══════════════════════════════════════════
    RESET & BASE
@@ -466,10 +469,9 @@ ul{list-style:none}
 }
 @media(max-width:540px){.b-photo{grid-column:span 1;min-height:280px}}
 .b-photo-img{
-  width:100%;height:100%;object-fit:cover;
-  background:linear-gradient(135deg,#1a1a2e 0%,#16213e 40%,#0f3460 100%);
-  display:flex;align-items:center;justify-content:center;
-  font-size:5rem;flex:1
+  width:100%;height:100%;object-fit:cover;object-position:top;
+  display:block;flex:1;
+  background:linear-gradient(135deg,#1a1a2e 0%,#16213e 40%,#0f3460 100%)
 }
 .b-photo-overlay{
   position:absolute;inset:0;
@@ -572,7 +574,7 @@ ul{list-style:none}
   font-size:.75rem;font-weight:700
 }
 .result-up{background:rgba(34,197,94,.15);color:#4ade80}
-.result-down{background:rgba(6,182,212,.15);color:var(--al)}
+.result-down{background:rgba(6,182,212,.15);color:var(--a)}
 .result-time{background:rgba(99,102,241,.15);color:#a5b4fc}
 
 /* ══════════════════════════════════════════
@@ -868,7 +870,7 @@ footer{
      NAVBAR
 ══════════════════════════════════════════ -->
 <nav class="nav" id="nav">
-  <a href="#" class="nav-logo">АС</a>
+  <a href="#" class="nav-logo">SULTANOVA AI</a>
   <div class="nav-links">
     <a href="#services" class="nav-link">Услуги</a>
     <a href="#cases" class="nav-link">Кейсы</a>
@@ -878,7 +880,7 @@ footer{
   <div class="nav-right">
     <div class="nav-status">
       <span class="status-dot"></span>
-      <span>Открыт для проектов</span>
+      <span>Открыта для проектов</span>
     </div>
     <a href="#contact" class="nav-cta">Обсудить проект</a>
   </div>
@@ -908,7 +910,7 @@ footer{
   <div class="hero-inner">
     <div class="hero-badge">
       <span class="hero-badge-dot"></span>
-      Открыт для новых проектов · апрель 2026
+      Открыта для новых проектов · апрель 2026
     </div>
 
     <h1 class="hero-h1">Строю цифровые<br>инструменты.</h1>
@@ -1091,7 +1093,7 @@ footer{
     <div class="bento">
       <!-- Фото -->
       <div class="bento-card b-photo rv">
-        <div class="b-photo-img">👨‍💻</div>
+        <img class="b-photo-img" src="almira.jpg" alt="Альмира Султанова">
         <div class="b-photo-overlay"></div>
         <div class="b-photo-info">
           <div class="b-photo-name">Альмира Султанова</div>
@@ -1252,7 +1254,7 @@ footer{
     </div>
 
     <div style="text-align:center;margin-top:40px" class="rv">
-      <a href="https://github.com/" target="_blank" class="btn btn-s">
+      <a href="https://github.com/almirasultabova" target="_blank" class="btn btn-s">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         Смотреть код на GitHub
       </a>
@@ -1283,7 +1285,7 @@ footer{
 <section class="sec sec-dark" id="process">
   <div class="wrap-lg">
     <div class="sec-center">
-      <span class="lbl rv">как мы работаем</span>
+      <span class="lbl rv">как я работаю</span>
       <h2 class="sec-title rv d1">Никаких сюрпризов.<br>Только система.</h2>
       <p class="sec-sub rv d2" style="margin-left:auto;margin-right:auto">Пять шагов от первого контакта до запуска. Вы знаете, что происходит на каждом этапе.</p>
     </div>
@@ -1375,13 +1377,12 @@ footer{
     </div>
 
     <div class="clients-logos rv">
-      <p class="clients-label">Работали с</p>
-      <div class="logos-row">
-        <span class="logo-placeholder">Alpha Corp</span>
-        <span class="logo-placeholder">Tech Hub</span>
-        <span class="logo-placeholder">EduPro</span>
-        <span class="logo-placeholder">LawFirm</span>
-        <span class="logo-placeholder">StartUp X</span>
+      <p class="clients-label">Подписывайтесь на канал</p>
+      <div style="display:flex;justify-content:center;margin-top:16px">
+        <a href="https://t.me/AlmiraSultanova_AI" target="_blank" class="btn btn-s btn-a">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          SULTANOVA AI — кейсы, заметки, процессы
+        </a>
       </div>
     </div>
   </div>
@@ -1521,8 +1522,8 @@ footer{
         </form>
         <div class="form-success" id="formSuccess">
           <div class="success-icon">✅</div>
-          <h3>Заявка отправлена!</h3>
-          <p>Отвечу в течение 2 часов в рабочее время.</p>
+          <h3>Telegram открыт!</h3>
+          <p>Сообщение уже готово — просто нажмите «Отправить» в Telegram. Отвечу в течение 2 часов.</p>
         </div>
       </div>
     </div>
@@ -1535,8 +1536,8 @@ footer{
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="footer-logo">Альмира Султанова</div>
-      <p>Сайты · Приложения · ИИ-агенты</p>
+      <div class="footer-logo">SULTANOVA AI</div>
+      <p>Альмира Султанова · Сайты · Приложения · ИИ-агенты</p>
     </div>
     <nav class="footer-nav">
       <a href="#services">Услуги</a>
@@ -1548,11 +1549,11 @@ footer{
       <a href="https://t.me/Almira_Sultanova" class="soc-btn" target="_blank" title="Telegram">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
       </a>
-      <a href="https://github.com/" class="soc-btn" target="_blank" title="GitHub">
+      <a href="https://github.com/almirasultabova" class="soc-btn" target="_blank" title="GitHub">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
       </a>
-      <a href="https://linkedin.com/" class="soc-btn" target="_blank" title="LinkedIn">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      <a href="https://t.me/AlmiraSultanova_AI" class="soc-btn" target="_blank" title="Telegram-канал SULTANOVA AI">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
       </a>
     </div>
   </div>
@@ -1711,13 +1712,20 @@ document.querySelectorAll('.faq-q').forEach(btn=>{
 ══════════════════════════════════════ */
 document.getElementById('contactForm').addEventListener('submit',function(e){
   e.preventDefault();
+  const name=document.getElementById('fname').value.trim();
+  const contact=document.getElementById('fcontact').value.trim();
+  const task=document.getElementById('ftask').value.trim();
   const btn=this.querySelector('button[type=submit]');
-  btn.innerHTML='<span>Отправляю...</span>';
+  btn.innerHTML='<span>Открываю Telegram...</span>';
   btn.disabled=true;
+  const msg=`Привет, Альмира! Меня зовут ${name}.`
+    +(contact?`\nКонтакт: ${contact}`:'')
+    +(task?`\nЗадача: ${task}`:'');
+  window.open('https://t.me/Almira_Sultanova?text='+encodeURIComponent(msg),'_blank');
   setTimeout(()=>{
     this.style.display='none';
     document.getElementById('formSuccess').style.display='block'
-  },1200)
+  },800)
 });
 
 /* ══════════════════════════════════════
