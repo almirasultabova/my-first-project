@@ -98,6 +98,97 @@ html[data-theme="light"] .footer-copy{color:#64748b}
 html[data-theme="light"] .btn-top{background:#fff;border-color:rgba(79,70,229,.2);color:#4f46e5}
 html[data-theme="light"] .progress-bar{background:var(--grad)}
 
+/* ── Градиентные заголовки ── */
+html[data-theme="light"] .sec-title{
+  background:linear-gradient(135deg,#1e1b4b,#4f46e5);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent
+}
+html[data-theme="light"] .hero-h1{
+  background:linear-gradient(90deg,#1e1b4b 0%,#4f46e5 35%,#0891b2 60%,#4f46e5 85%,#1e1b4b 100%);
+  background-size:250% 100%
+}
+/* ── Светло-серые тексты → читаемые ── */
+html[data-theme="light"] .hero-desc,
+html[data-theme="light"] .hero-desc p{color:#334155}
+html[data-theme="light"] .hero-spec{color:#475569}
+html[data-theme="light"] .pain-text{color:#334155}
+html[data-theme="light"] .pain-insight p{color:#334155}
+html[data-theme="light"] .b-bio p{color:#334155}
+html[data-theme="light"] .b-quote blockquote{color:#1e293b}
+html[data-theme="light"] .case-result{color:#334155}
+html[data-theme="light"] .review-text{color:#334155}
+html[data-theme="light"] .example-step{color:#334155}
+html[data-theme="light"] .approach-text{color:#334155}
+html[data-theme="light"] .strong-sub{color:#475569}
+html[data-theme="light"] .srv-desc{color:#475569}
+html[data-theme="light"] .proc-desc{color:#475569}
+/* ── Белые заголовки карточек → тёмные ── */
+html[data-theme="light"] .srv-title,
+html[data-theme="light"] .idea-title,
+html[data-theme="light"] .case-title,
+html[data-theme="light"] .proc-title,
+html[data-theme="light"] .review-name,
+html[data-theme="light"] .example-scenario{color:#0f172a}
+/* ── Белые inline-стили ── */
+html[data-theme="light"] b[style*="color:#e2e8f0"]{color:#0f172a!important}
+html[data-theme="light"] b[style*="color:#fff"]{color:#0f172a!important}
+html[data-theme="light"] [style*="color:#fff"]{color:#0f172a!important}
+html[data-theme="light"] [style*="color:#a5b4c8"]{color:#475569!important}
+/* ── Strong quote block ── */
+html[data-theme="light"] .strong-block{
+  background:linear-gradient(135deg,rgba(79,70,229,.05),rgba(8,145,178,.04));
+  border-color:rgba(79,70,229,.12)
+}
+html[data-theme="light"] .strong-quote{color:#0f172a}
+html[data-theme="light"] .strong-task{
+  background:rgba(79,70,229,.07);border-color:rgba(79,70,229,.18);color:#4f46e5
+}
+html[data-theme="light"] .strong-tasks-label{color:#0891b2}
+/* ── Теги и чипсы ── */
+html[data-theme="light"] .tag{
+  background:rgba(79,70,229,.08);border-color:rgba(79,70,229,.18);color:#4f46e5
+}
+html[data-theme="light"] .idea-tag{
+  background:rgba(8,145,178,.08);border-color:rgba(8,145,178,.18);color:#0891b2
+}
+html[data-theme="light"] .proc-time{
+  background:rgba(79,70,229,.08);border-color:rgba(79,70,229,.18);color:#4f46e5
+}
+html[data-theme="light"] .proc-num{color:#0891b2}
+/* ── Approach section ── */
+html[data-theme="light"] .approach-node{
+  background:rgba(79,70,229,.08);border-color:rgba(79,70,229,.18);color:#4f46e5
+}
+html[data-theme="light"] .approach-arr{color:#0891b2}
+/* ── Example cards ── */
+html[data-theme="light"] .example-num{
+  background:linear-gradient(135deg,#4f46e5,#0891b2);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent
+}
+html[data-theme="light"] .example-result{
+  background:rgba(22,163,74,.07);border-color:rgba(22,163,74,.2);color:#15803d
+}
+html[data-theme="light"] .example-solution-lbl{color:#0891b2}
+/* ── Pain insight ── */
+html[data-theme="light"] .pain-insight{
+  background:rgba(79,70,229,.06);border-color:rgba(79,70,229,.15)
+}
+html[data-theme="light"] .pain-insight p:last-child{
+  background:linear-gradient(135deg,#4f46e5,#0891b2);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent
+}
+/* ── Hero stats ── */
+html[data-theme="light"] .hero-stats{border-top-color:rgba(79,70,229,.15)}
+html[data-theme="light"] .hero-stat-lbl{color:#64748b}
+html[data-theme="light"] .scroll-hint{color:#64748b}
+/* ── Process dots ── */
+html[data-theme="light"] .proc-dot{box-shadow:0 0 0 6px var(--bg),var(--glow-p)}
+/* ── Review avatars keep gradient ── */
+html[data-theme="light"] .review-pos{color:#64748b}
+/* ── FAQ ── */
+html[data-theme="light"] .faq-q{color:#0f172a}
+html[data-theme="light"] .faq-text{color:#475569}
+
 /* Theme toggle button */
 .theme-btn{
   width:36px;height:36px;border-radius:50%;
