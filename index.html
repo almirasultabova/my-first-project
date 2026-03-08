@@ -224,10 +224,15 @@ ul{list-style:none}
   font-weight:800;line-height:1.12;
   letter-spacing:-0.03em;
   margin-bottom:16px;
-  background:var(--grad-text);
+  background:linear-gradient(90deg,#fff 0%,#c7d2fe 25%,#22d3ee 50%,#c7d2fe 75%,#fff 100%);
+  background-size:250% 100%;
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   filter:drop-shadow(0 0 50px rgba(99,102,241,.35));
-  animation:fade-up .9s cubic-bezier(.16,1,.3,1) forwards .3s;opacity:0
+  animation:fade-up .9s cubic-bezier(.16,1,.3,1) .3s forwards,shimmer-text 7s ease-in-out 1.8s infinite;opacity:0
+}
+@keyframes shimmer-text{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
 }
 .hero-spec{
   font-size:clamp(1rem,2.8vw,1.3rem);
@@ -991,6 +996,39 @@ footer{
   transition:all var(--transition)
 }
 .strong-task:hover{background:rgba(79,70,229,.2);border-color:var(--ph);color:#fff}
+
+/* ══════════════════════════════════════════
+   CARD SHINE SWEEP
+══════════════════════════════════════════ */
+.srv-card,.pain-card,.idea-card,.review-card,.bento-card,.example-card{overflow:hidden}
+.srv-card::after,.pain-card::after,.idea-card::after,
+.review-card::after,.bento-card::after,.example-card::after{
+  content:'';position:absolute;top:0;left:-80%;
+  width:50%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.055),transparent);
+  transform:skewX(-15deg);pointer-events:none;z-index:2;
+  transition:left .7s ease
+}
+.srv-card:hover::after,.pain-card:hover::after,.idea-card:hover::after,
+.review-card:hover::after,.bento-card:hover::after,.example-card:hover::after{left:140%}
+
+/* ══════════════════════════════════════════
+   ACTIVE NAV LINK
+══════════════════════════════════════════ */
+.nav-link{position:relative}
+.nav-link::after{
+  content:'';position:absolute;bottom:-3px;left:50%;right:50%;
+  height:1px;background:var(--a);
+  transition:left .3s ease,right .3s ease
+}
+.nav-link:hover::after,.nav-link.active::after{left:0;right:0}
+.nav-link.active{color:var(--txt)!important}
+
+/* ══════════════════════════════════════════
+   MAGNETIC BUTTON
+══════════════════════════════════════════ */
+.btn-p{will-change:transform}
+.btn-p.btn-pulse-active{animation:none}
 </style>
 </head>
 <body>
@@ -2066,6 +2104,86 @@ const staggerIO=new IntersectionObserver(entries=>{
   })
 },{threshold:.2});
 document.querySelectorAll('.tags,.process-grid,.pain-grid').forEach(el=>staggerIO.observe(el));
+
+/* ══════════════════════════════════════
+   PARALLAX HERO
+══════════════════════════════════════ */
+(function(){
+  const inner=document.querySelector('.hero-inner');
+  if(!inner)return;
+  let ticking=false;
+  window.addEventListener('scroll',()=>{
+    if(!ticking){
+      requestAnimationFrame(()=>{
+        inner.style.transform=`translateY(${window.scrollY*.18}px)`;
+        ticking=false
+      });
+      ticking=true
+    }
+  },{passive:true})
+})();
+
+/* ══════════════════════════════════════
+   MAGNETIC BUTTONS
+══════════════════════════════════════ */
+document.querySelectorAll('.btn-p').forEach(btn=>{
+  btn.addEventListener('mousemove',e=>{
+    const r=btn.getBoundingClientRect();
+    const x=(e.clientX-r.left-r.width/2)*.14;
+    const y=(e.clientY-r.top-r.height/2)*.22;
+    btn.style.transform=`translate(${x}px,${y-2}px)`
+  });
+  btn.addEventListener('mouseleave',()=>{
+    btn.style.transform='';
+    btn.style.transition='transform .4s cubic-bezier(.4,0,.2,1)'
+  });
+  btn.addEventListener('mouseenter',()=>{
+    btn.style.transition='transform .1s ease'
+  })
+});
+
+/* ══════════════════════════════════════
+   COUNT-UP HERO STATS
+══════════════════════════════════════ */
+(function(){
+  function easeOut(t){return 1-Math.pow(1-t,3)}
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting)return;
+      const el=e.target;
+      const raw=el.textContent.trim();
+      const m=raw.match(/^(\d+)(.*)/);
+      if(!m)return;
+      const target=+m[1],suffix=m[2],dur=1500,start=Date.now();
+      (function tick(){
+        const p=Math.min((Date.now()-start)/dur,1);
+        el.textContent=Math.round(target*easeOut(p))+suffix;
+        if(p<1)requestAnimationFrame(tick)
+      })();
+      io.unobserve(el)
+    })
+  },{threshold:.9});
+  document.querySelectorAll('.hero-stat-num').forEach(el=>io.observe(el))
+})();
+
+/* ══════════════════════════════════════
+   ACTIVE NAV ON SCROLL
+══════════════════════════════════════ */
+(function(){
+  const links=document.querySelectorAll('.nav-link[href^="#"]');
+  const sections=[...links]
+    .map(l=>document.querySelector(l.getAttribute('href')))
+    .filter(Boolean);
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const id='#'+e.target.id;
+        links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')===id))
+      }
+    })
+  },{threshold:.25,rootMargin:'-72px 0px -45% 0px'});
+  sections.forEach(s=>io.observe(s))
+})();
 </script>
 </body>
 </html>
