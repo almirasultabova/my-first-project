@@ -56,6 +56,64 @@ ul{list-style:none}
 }
 
 /* ══════════════════════════════════════════
+   LIGHT THEME
+══════════════════════════════════════════ */
+html[data-theme="light"]{
+  --bg:        #F5F7FF;
+  --bg2:       #FFFFFF;
+  --bg3:       #EEF1FF;
+  --p:         #4f46e5;
+  --ph:        #6366f1;
+  --a:         #0891b2;
+  --ah:        #06b6d4;
+  --txt:       #0f172a;
+  --muted:     #64748b;
+  --border:    rgba(0,0,0,0.09);
+  --border2:   rgba(0,0,0,0.15);
+  --glow-p:    0 0 30px rgba(79,70,229,.18);
+  --glow-a:    0 0 20px rgba(8,145,178,.18);
+  --grad-text: linear-gradient(135deg,#1e1b4b 0%,#4f46e5 50%,#0891b2 100%)
+}
+html[data-theme="light"] body{background:#F5F7FF;color:#0f172a}
+html[data-theme="light"] .hero{background:linear-gradient(160deg,#eef1ff 0%,#f5f7ff 60%,#e0f2fe 100%)}
+html[data-theme="light"] #hero-canvas{opacity:.35}
+html[data-theme="light"] .hero-orb{filter:blur(90px) brightness(1.5)}
+html[data-theme="light"] .nav.scrolled{background:rgba(245,247,255,.92)}
+html[data-theme="light"] .mobile-menu{background:rgba(245,247,255,.98)}
+html[data-theme="light"] .sec-dark{background:#eef1ff}
+html[data-theme="light"] .bento-card,
+html[data-theme="light"] .srv-card,
+html[data-theme="light"] .pain-card,
+html[data-theme="light"] .idea-card,
+html[data-theme="light"] .review-card,
+html[data-theme="light"] .example-card,
+html[data-theme="light"] .faq-item{background:#fff;border-color:rgba(79,70,229,.12)}
+html[data-theme="light"] .pain-insight{background:rgba(79,70,229,.05);border-color:rgba(79,70,229,.15)}
+html[data-theme="light"] .field input,
+html[data-theme="light"] .field textarea{background:#fff;border-color:rgba(0,0,0,.12);color:#0f172a}
+html[data-theme="light"] .btn-s{color:#0f172a;border-color:rgba(0,0,0,.2)}
+html[data-theme="light"] .btn-s:hover{background:rgba(0,0,0,.05)}
+html[data-theme="light"] footer{background:#eef1ff;border-top-color:rgba(79,70,229,.1)}
+html[data-theme="light"] .footer-copy{color:#64748b}
+html[data-theme="light"] .btn-top{background:#fff;border-color:rgba(79,70,229,.2);color:#4f46e5}
+html[data-theme="light"] .progress-bar{background:var(--grad)}
+
+/* Theme toggle button */
+.theme-btn{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--bg3);border:1px solid var(--border2);
+  color:var(--muted);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all var(--transition);flex-shrink:0
+}
+.theme-btn:hover{border-color:var(--p);color:var(--p)}
+.theme-btn .icon-moon{display:block}
+.theme-btn .icon-sun{display:none}
+html[data-theme="light"] .theme-btn .icon-moon{display:none}
+html[data-theme="light"] .theme-btn .icon-sun{display:block}
+@media(max-width:768px){.theme-btn{width:32px;height:32px}}
+
+/* ══════════════════════════════════════════
    SCROLL PROGRESS
 ══════════════════════════════════════════ */
 .progress-bar{
@@ -900,8 +958,24 @@ footer{
 .footer-copy{
   max-width:900px;margin:28px auto 0;padding-top:24px;
   border-top:1px solid var(--border);
-  text-align:center;font-size:.75rem;color:var(--muted)
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:12px;
+  font-size:.75rem;color:var(--muted)
 }
+.made-by{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 14px;border-radius:100px;
+  border:1px solid var(--border2);
+  font-size:.72rem;color:var(--muted);font-weight:500;
+  transition:all var(--transition)
+}
+.made-by span{
+  background:var(--grad-text);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  font-weight:700
+}
+.made-by:hover{border-color:var(--p);color:var(--txt);transform:translateY(-2px)}
+@media(max-width:600px){.footer-copy{justify-content:center;text-align:center}}
 
 /* ══════════════════════════════════════════
    FLOATING CTA
@@ -1111,6 +1185,10 @@ footer{
       <span class="status-dot"></span>
       <span>Открыта для проектов</span>
     </div>
+    <button class="theme-btn" id="themeBtn" aria-label="Сменить тему">
+      <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    </button>
     <a href="#contact" class="nav-cta">Обсудить проект</a>
   </div>
   <button class="burger" id="burger" aria-label="Меню">
@@ -1166,10 +1244,6 @@ footer{
     </div>
 
     <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="hero-stat-num">15+</div>
-        <div class="hero-stat-lbl">проектов запущено</div>
-      </div>
       <div class="hero-stat">
         <div class="hero-stat-num">8</div>
         <div class="hero-stat-lbl">форматов решений</div>
@@ -1534,14 +1608,11 @@ footer{
         <div class="tags">
           <span class="tag">HTML / CSS</span>
           <span class="tag">JavaScript</span>
-          <span class="tag">React</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">Python</span>
-          <span class="tag">OpenAI API</span>
-          <span class="tag">n8n</span>
-          <span class="tag">Telegram Bot</span>
           <span class="tag">Figma</span>
-          <span class="tag">Supabase</span>
+          <span class="tag">Vibe Coding</span>
+          <span class="tag">AI-инструменты</span>
+          <span class="tag">Telegram API</span>
+          <span class="tag">No-code / Low-code</span>
         </div>
       </div>
 
@@ -1864,15 +1935,6 @@ footer{
           <p class="faq-text">Лендинг — от 30 000 ₽ (2–3 нед.). Telegram-бот — от 15 000 ₽ (1–2 нед.). AI-ассистент — от 20 000 ₽ (1–2 нед.). MVP — от 80 000 ₽ (3–8 нед.). Точную стоимость и сроки называю после разбора задачи.</p>
         </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-q">
-          Работаете ли с нерезидентами?
-          <div class="faq-icon">+</div>
-        </button>
-        <div class="faq-a">
-          <p class="faq-text">Да, работаю с клиентами из СНГ, Европы и других стран. Оплата — USDT, Wise, банковский перевод. Коммуникация — на русском или английском.</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -1955,15 +2017,20 @@ footer{
       <a href="https://t.me/Almira_Sultanova" class="soc-btn" target="_blank" title="Telegram">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
       </a>
-      <a href="https://github.com/almirasultabova" class="soc-btn" target="_blank" title="GitHub">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+      <a href="https://max.ru/u/f9LHodD0cOLp5PzXoXhv5U1Uv7VwvWqcBClQ5wxNDmnfnpr9bfY5Gs-yLiY" class="soc-btn" target="_blank" title="MAX">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
       </a>
       <a href="https://t.me/AlmiraSultanova_AI" class="soc-btn" target="_blank" title="Telegram-канал SULTANOVA AI">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
       </a>
     </div>
   </div>
-  <div class="footer-copy">© 2026 Альмира Султанова · Все права защищены</div>
+  <div class="footer-copy">
+    <span>© 2026 Альмира Султанова · Все права защищены</span>
+    <a href="https://t.me/Almira_Sultanova" target="_blank" class="made-by">
+      Разработано <span>SULTANOVA AI</span> ✦
+    </a>
+  </div>
 </footer>
 
 <!-- BACK TO TOP -->
@@ -2183,22 +2250,22 @@ btnTop.addEventListener('click',()=>{
 });
 
 /* ══════════════════════════════════════
-   PARALLAX HERO
+   THEME TOGGLE
 ══════════════════════════════════════ */
 (function(){
-  const inner=document.querySelector('.hero-inner');
-  if(!inner)return;
-  let ticking=false;
-  window.addEventListener('scroll',()=>{
-    if(!ticking){
-      requestAnimationFrame(()=>{
-        inner.style.transform=`translateY(${window.scrollY*.18}px)`;
-        ticking=false
-      });
-      ticking=true
-    }
-  },{passive:true})
+  const btn=document.getElementById('themeBtn');
+  const html=document.documentElement;
+  const saved=localStorage.getItem('theme');
+  if(saved)html.setAttribute('data-theme',saved);
+  btn.addEventListener('click',()=>{
+    const isLight=html.getAttribute('data-theme')==='light';
+    const next=isLight?'dark':'light';
+    html.setAttribute('data-theme',next);
+    localStorage.setItem('theme',next)
+  })
 })();
+
+/* PARALLAX HERO — отключён (конфликт со scroll-hint) */
 
 /* ══════════════════════════════════════
    MAGNETIC BUTTONS
