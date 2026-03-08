@@ -220,9 +220,9 @@ ul{list-style:none}
   animation:pulse-dot 2s infinite
 }
 .hero-h1{
-  font-size:clamp(3rem,9vw,7.5rem);
-  font-weight:800;line-height:1;
-  letter-spacing:-0.04em;
+  font-size:clamp(1.85rem,4.5vw,3.6rem);
+  font-weight:800;line-height:1.12;
+  letter-spacing:-0.03em;
   margin-bottom:16px;
   background:var(--grad-text);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
@@ -241,6 +241,7 @@ ul{list-style:none}
   max-width:520px;margin:0 auto 44px;
   animation:fade-up .8s ease forwards .7s;opacity:0
 }
+.hero-desc p+p{margin-top:10px}
 .hero-btns{
   display:flex;gap:14px;flex-wrap:wrap;justify-content:center;
   animation:fade-up .8s ease forwards .9s;opacity:0
@@ -268,6 +269,7 @@ ul{list-style:none}
 }
 .scroll-hint svg{animation:bounce-arrow 2s ease infinite}
 @keyframes bounce-arrow{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
 
 @keyframes fade-up{
   from{opacity:0;transform:translateY(30px)}
@@ -389,9 +391,10 @@ ul{list-style:none}
    SECTION 3 — SERVICES
 ══════════════════════════════════════════ */
 .services-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:20px
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px
 }
-@media(max-width:768px){.services-grid{grid-template-columns:1fr}}
+@media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.services-grid{grid-template-columns:1fr}}
 .srv-card{
   background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);
   padding:32px;position:relative;overflow:hidden;
@@ -615,7 +618,7 @@ ul{list-style:none}
    SECTION 6 — PROCESS
 ══════════════════════════════════════════ */
 .process-grid{
-  display:grid;grid-template-columns:repeat(5,1fr);gap:0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
   margin-top:8px;position:relative
 }
 .process-grid::before{
@@ -855,6 +858,139 @@ footer{
 .float-cta.on{opacity:1;transform:translateY(0);pointer-events:all}
 .float-cta .btn{font-size:.83rem;padding:11px 20px;box-shadow:0 4px 20px rgba(0,0,0,.4)}
 @media(max-width:480px){.float-cta{bottom:16px;right:16px}}
+
+/* ══════════════════════════════════════════
+   AI IDEAS SECTION
+══════════════════════════════════════════ */
+.ideas-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px
+}
+.idea-card{
+  background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);
+  padding:24px;
+  transition:border-color var(--transition),transform var(--transition)
+}
+.idea-card:hover{border-color:rgba(6,182,212,.3);transform:translateY(-4px)}
+.idea-icon{
+  width:44px;height:44px;border-radius:10px;margin-bottom:14px;
+  background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.18);
+  display:flex;align-items:center;justify-content:center;font-size:1.3rem
+}
+.idea-title{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:6px}
+.idea-desc{font-size:.83rem;color:var(--muted);line-height:1.65}
+.idea-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.idea-tag{
+  padding:3px 10px;border-radius:100px;
+  background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.15);
+  font-size:.7rem;color:var(--a)
+}
+
+/* ══════════════════════════════════════════
+   EXAMPLES SECTION (как это выглядит)
+══════════════════════════════════════════ */
+.examples-grid{display:flex;flex-direction:column;gap:20px}
+.example-card{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);
+  padding:32px 36px;display:grid;grid-template-columns:220px 1fr;gap:36px;align-items:start;
+  transition:border-color var(--transition)
+}
+.example-card:hover{border-color:rgba(99,102,241,.25)}
+@media(max-width:768px){.example-card{grid-template-columns:1fr;padding:24px}}
+.example-left{}
+.example-num{
+  font-size:3.5rem;font-weight:800;line-height:1;letter-spacing:-.05em;
+  background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent
+}
+.example-scenario{font-size:1rem;font-weight:700;color:#fff;margin-top:8px;line-height:1.4}
+.example-right{}
+.example-solution-lbl{
+  font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--a);margin-bottom:12px;display:block
+}
+.example-flow{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.example-step{
+  display:flex;align-items:center;gap:10px;font-size:.88rem;color:#c0cad8
+}
+.example-arrow{
+  display:flex;justify-content:center;font-size:.8rem;color:var(--muted);
+  margin:4px 0 4px 34px
+}
+.example-step-dot{
+  width:26px;height:26px;border-radius:7px;flex-shrink:0;
+  background:rgba(79,70,229,.12);border:1px solid rgba(79,70,229,.2);
+  display:flex;align-items:center;justify-content:center;font-size:.8rem
+}
+.example-result{
+  padding:14px 18px;border-radius:10px;
+  background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.18);
+  font-size:.85rem;color:#86efac;line-height:1.6
+}
+
+/* ══════════════════════════════════════════
+   APPROACH SECTION (мой подход)
+══════════════════════════════════════════ */
+.approach-text{
+  max-width:680px;margin:0 auto 40px;
+  font-size:1.05rem;color:#c0cad8;line-height:1.9;text-align:center
+}
+.approach-text p+p{margin-top:10px}
+.example-left .case-tag{position:static;display:inline-block;margin-top:12px}
+.approach-flow{
+  display:flex;align-items:center;justify-content:center;
+  flex-wrap:wrap;gap:10px;margin-bottom:40px
+}
+.approach-node{
+  padding:10px 20px;border-radius:100px;
+  background:rgba(79,70,229,.1);border:1px solid rgba(79,70,229,.2);
+  font-size:.88rem;color:#a5b4fc;font-weight:500
+}
+.approach-arr{color:var(--a);font-size:1rem;padding:0 2px}
+
+/* ══════════════════════════════════════════
+   HERO DESC LIST
+══════════════════════════════════════════ */
+.hero-desc-list{
+  font-size:.82rem;color:var(--muted);margin-top:12px;line-height:2;letter-spacing:.01em
+}
+
+/* ══════════════════════════════════════════
+   STRONG QUOTE BLOCK
+══════════════════════════════════════════ */
+.strong-block{
+  padding:80px 24px;
+  background:linear-gradient(135deg,rgba(79,70,229,.08) 0%,rgba(6,182,212,.06) 100%);
+  border-top:1px solid rgba(99,102,241,.12);
+  border-bottom:1px solid rgba(99,102,241,.12)
+}
+.strong-quote{
+  font-size:clamp(1.4rem,3.5vw,2.1rem);font-weight:800;
+  color:#fff;line-height:1.35;letter-spacing:-.025em;
+  text-align:center;max-width:820px;margin:0 auto 14px
+}
+.strong-quote span{
+  background:var(--grad-text);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent
+}
+.strong-sub{
+  text-align:center;font-size:1rem;color:var(--muted);
+  margin-bottom:40px
+}
+.strong-tasks-label{
+  text-align:center;font-size:.72rem;font-weight:600;
+  letter-spacing:.22em;text-transform:uppercase;
+  color:var(--a);margin-bottom:20px
+}
+.strong-tasks{
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:center;
+  max-width:700px;margin:0 auto 36px
+}
+.strong-task{
+  padding:10px 22px;border-radius:100px;
+  background:rgba(79,70,229,.1);border:1px solid rgba(79,70,229,.22);
+  font-size:.9rem;color:#c7d2fe;font-weight:500;
+  transition:all var(--transition)
+}
+.strong-task:hover{background:rgba(79,70,229,.2);border-color:var(--ph);color:#fff}
 </style>
 </head>
 <body>
@@ -910,26 +1046,28 @@ footer{
   <div class="hero-inner">
     <div class="hero-badge">
       <span class="hero-badge-dot"></span>
-      Открыта для новых проектов · апрель 2026
+      Бесплатная консультация по вашему проекту
     </div>
 
-    <h1 class="hero-h1">Строю цифровые<br>инструменты.</h1>
+    <h1 class="hero-h1">Проектирую AI-решения<br>и цифровые системы для бизнеса</h1>
 
     <p class="hero-spec">
-      <span>Сайты</span> &nbsp;·&nbsp; <span>Приложения</span> &nbsp;·&nbsp; <span>ИИ-агенты</span>
+      <span>Сайты</span> &nbsp;·&nbsp; <span>Telegram-приложения</span> &nbsp;·&nbsp; <span>AI-ассистенты</span> &nbsp;·&nbsp; <span>квизы</span> &nbsp;·&nbsp; <span>подписки</span> &nbsp;·&nbsp; <span>автоматизация</span>
     </p>
 
-    <p class="hero-desc">
-      Помогаю бизнесу расти через технологии,<br>которые работают без вас.
-    </p>
+    <div class="hero-desc">
+      <p>Я помогаю экспертам и предпринимателям превращать идеи и процессы в рабочие цифровые инструменты.</p>
+      <p class="hero-desc-list">Система заявок&ensp;·&ensp;AI-ассистент&ensp;·&ensp;Telegram-продукт&ensp;·&ensp;Автоматизация процессов&ensp;·&ensp;Новый digital-сервис</p>
+      <p style="margin-top:12px;font-size:.9rem;color:#a5b4c8;font-style:italic">Я не просто делаю инструменты — я помогаю собрать систему, которая работает на результат.</p>
+    </div>
 
     <div class="hero-btns">
       <a href="#contact" class="btn btn-p pulse">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
         <span>Обсудить проект</span>
       </a>
-      <a href="#cases" class="btn btn-s">
-        Смотреть работы
+      <a href="#services" class="btn btn-s">
+        Посмотреть решения
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
       </a>
     </div>
@@ -940,8 +1078,8 @@ footer{
         <div class="hero-stat-lbl">проектов запущено</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num">3</div>
-        <div class="hero-stat-lbl">направления</div>
+        <div class="hero-stat-num">8</div>
+        <div class="hero-stat-lbl">форматов решений</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-num">2 ч</div>
@@ -963,44 +1101,55 @@ footer{
 </section>
 
 <!-- ══════════════════════════════════════════
-     SECTION 2 — БОЛИ
+     SECTION 2 — АВТОМАТИЗАЦИЯ
 ══════════════════════════════════════════ -->
-<section class="sec sec-dark" id="pain">
+<section class="sec sec-dark" id="automation">
   <div class="wrap">
-    <span class="lbl rv">знакомо?</span>
-    <h2 class="sec-title rv d1">Вы уже пробовали.<br>И что-то пошло не так.</h2>
-    <p class="sec-sub rv d2">Это не ваша вина. Это проблема рынка.</p>
+    <span class="lbl rv">почему это важно</span>
+    <h2 class="sec-title rv d1">Сегодня многие процессы можно<br>превратить в цифровой инструмент</h2>
+    <p class="sec-sub rv d2">То, что раньше требовало команды или сложной разработки, сегодня можно собрать быстрее через AI-инструменты и современные digital-решения.</p>
 
     <div class="pain-grid">
       <div class="pain-card rv d1">
-        <div class="pain-icon">💸</div>
-        <p class="pain-text">Заплатили подрядчику — он пропал с предоплатой или сдал нерабочий продукт</p>
+        <div class="pain-icon">📥</div>
+        <p class="pain-text"><b style="color:#e2e8f0">Сбор заявок</b><br>Бот или форма принимает обращения 24/7</p>
       </div>
       <div class="pain-card rv d2">
-        <div class="pain-icon">⏳</div>
-        <p class="pain-text">«Три недели» превратились в три месяца. Дедлайны не соблюдаются</p>
+        <div class="pain-icon">💬</div>
+        <p class="pain-text"><b style="color:#e2e8f0">Консультации</b><br>AI-ассистент отвечает на типовые вопросы</p>
       </div>
       <div class="pain-card rv d3">
-        <div class="pain-icon">📉</div>
-        <p class="pain-text">Сайт сделан, но заявок нет — непонятно, что не работает и почему</p>
+        <div class="pain-icon">📅</div>
+        <p class="pain-text"><b style="color:#e2e8f0">Запись клиентов</b><br>Автоматическое расписание и напоминания</p>
       </div>
       <div class="pain-card rv d4">
-        <div class="pain-icon">🤖</div>
-        <p class="pain-text">Хотели внедрить ИИ, но решение оказалось слишком сложным для команды</p>
+        <div class="pain-icon">📚</div>
+        <p class="pain-text"><b style="color:#e2e8f0">Обучение</b><br>Бот-ассистент сопровождает учеников</p>
       </div>
       <div class="pain-card rv d5">
-        <div class="pain-icon">🔇</div>
-        <p class="pain-text">После сдачи — тишина. Поддержки нет, на вопросы никто не отвечает</p>
+        <div class="pain-icon">🛒</div>
+        <p class="pain-text"><b style="color:#e2e8f0">Продажа продуктов</b><br>Автоматические воронки и оплата</p>
       </div>
     </div>
 
-    <div class="pain-insight rv">
-      <p>Именно поэтому я работаю иначе.</p>
-      <p>Фиксированные сроки. Прозрачный процесс. Результат в цифрах.</p>
+    <div class="pain-grid" style="margin-top:0">
+      <div class="pain-card rv d1">
+        <div class="pain-icon">🔔</div>
+        <p class="pain-text"><b style="color:#e2e8f0">Подписочные сервисы</b><br>Платный контент с автоматическим доступом</p>
+      </div>
+      <div class="pain-card rv d2">
+        <div class="pain-icon">⚙️</div>
+        <p class="pain-text"><b style="color:#e2e8f0">Внутренние инструменты</b><br>База знаний и автоматизация для команды</p>
+      </div>
+      <div class="pain-card rv d3">
+        <div class="pain-icon">🚀</div>
+        <p class="pain-text"><b style="color:#e2e8f0">MVP продукта</b><br>Быстрый запуск для проверки идеи</p>
+      </div>
     </div>
 
-    <div style="text-align:center" class="rv">
-      <a href="#process" class="btn btn-s">Как я работаю →</a>
+    <div class="pain-insight rv" style="margin-top:32px">
+      <p>Если правильно собрать систему —</p>
+      <p>многие процессы начинают работать автоматически.</p>
     </div>
   </div>
 </section>
@@ -1009,74 +1158,251 @@ footer{
      SECTION 3 — УСЛУГИ
 ══════════════════════════════════════════ -->
 <section class="sec" id="services">
-  <div class="wrap">
-    <span class="lbl rv">что я делаю</span>
-    <h2 class="sec-title rv d1">Три направления.<br>Одна точка входа.</h2>
-    <p class="sec-sub rv d2">Всё необходимое для цифрового присутствия бизнеса — от лендинга до ИИ-автоматизации.</p>
+  <div class="wrap-lg">
+    <span class="lbl rv">что можно создать</span>
+    <h2 class="sec-title rv d1">Какие решения<br>можно создать</h2>
+    <p class="sec-sub rv d2">От простого лендинга до сложной системы — подбираем формат под задачу.</p>
 
     <div class="services-grid">
-      <!-- Card 1 -->
       <div class="srv-card rv d1">
         <div class="srv-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
-          </svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
         </div>
-        <span class="srv-tag">Веб-дизайн</span>
+        <span class="srv-tag">Веб</span>
         <h3 class="srv-title">Сайты и лендинги</h3>
-        <p class="srv-desc">Конверсионные сайты, которые приводят клиентов — дизайн, код и аналитика под ключ. Без шаблонов.</p>
+        <p class="srv-desc">Современные сайты под продукт, услугу или запуск.</p>
         <div class="srv-meta">
-          <span class="srv-time">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            от 2 недель
-          </span>
-          <a href="#cases" class="srv-link">Примеры
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+          <span class="srv-time"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> от 2 недель</span>
+          <a href="#cases" class="srv-link">Примеры <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
 
-      <!-- Card 2 -->
       <div class="srv-card rv d2">
         <div class="srv-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/>
-          </svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
         </div>
-        <span class="srv-tag">Разработка</span>
-        <h3 class="srv-title">Веб-приложения</h3>
-        <p class="srv-desc">SaaS, CRM, личные кабинеты, внутренние инструменты. MVP от идеи до первых пользователей.</p>
+        <span class="srv-tag">Telegram</span>
+        <h3 class="srv-title">Telegram-боты</h3>
+        <p class="srv-desc">Боты для заявок, продаж, записи и сопровождения клиентов.</p>
         <div class="srv-meta">
-          <span class="srv-time">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            от 4 недель
-          </span>
-          <a href="#cases" class="srv-link">Примеры
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+          <span class="srv-time"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> от 1 недели</span>
+          <a href="#cases" class="srv-link">Примеры <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
 
-      <!-- Card 3 — AI -->
-      <div class="srv-card ai-card rv d3">
+      <div class="srv-card rv d3">
         <div class="srv-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 2a4 4 0 014 4 4 4 0 01-4 4 4 4 0 01-4-4 4 4 0 014-4"/><path d="M12 14a8 8 0 018 8H4a8 8 0 018-8"/><path d="M4.5 10.5L2 12l2.5 1.5"/><path d="M19.5 10.5L22 12l-2.5 1.5"/>
-          </svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
         </div>
-        <span class="srv-tag">Автоматизация</span>
-        <h3 class="srv-title">ИИ-агенты</h3>
-        <p class="srv-desc">Чатботы на ваших данных, GPT-ассистенты, автоворонки. Экономит 20+ часов работы команды в неделю.</p>
+        <span class="srv-tag">Telegram</span>
+        <h3 class="srv-title">Mini Apps</h3>
+        <p class="srv-desc">Полноценные приложения внутри Telegram без скачивания.</p>
         <div class="srv-meta">
-          <span class="srv-time">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            от 1 недели
-          </span>
-          <a href="#cases" class="srv-link">Примеры
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+          <span class="srv-time"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> от 2 недель</span>
+          <a href="#cases" class="srv-link">Примеры <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
+
+      <div class="srv-card rv d4">
+        <div class="srv-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        </div>
+        <span class="srv-tag">Интерактив</span>
+        <h3 class="srv-title">Квизы и калькуляторы</h3>
+        <p class="srv-desc">Интерактивные инструменты для сегментации и прогрева клиентов.</p>
+        <div class="srv-meta">
+          <span class="srv-time"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> от 1 недели</span>
+          <a href="#cases" class="srv-link">Примеры <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <div class="srv-card ai-card rv d1">
+        <div class="srv-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <span class="srv-tag">AI</span>
+        <h3 class="srv-title">AI-ассистенты</h3>
+        <p class="srv-desc">Автоматические помощники для клиентов или команды на ваших данных.</p>
+        <div class="srv-meta">
+          <span class="srv-time"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> от 1 недели</span>
+          <a href="#cases" class="srv-link">Примеры <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <div class="srv-card ai-card rv d2">
+        <div class="srv-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12h8M12 8v8"/></svg>
+        </div>
+        <span class="srv-tag">Монетизация</span>
+        <h3 class="srv-title">Подписочные продукты</h3>
+        <p class="srv-desc">Платные Telegram-каналы, закрытые сообщества и сервисы с подпиской.</p>
+        <div class="srv-meta">
+          <span class="srv-time"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> от 1 недели</span>
+          <a href="#cases" class="srv-link">Примеры <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <div class="srv-card rv d3">
+        <div class="srv-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <span class="srv-tag">Автоматизация</span>
+        <h3 class="srv-title">Автоматизация процессов</h3>
+        <p class="srv-desc">Связки сервисов, которые уменьшают ручную работу команды.</p>
+        <div class="srv-meta">
+          <span class="srv-time"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> от 1 недели</span>
+          <a href="#cases" class="srv-link">Примеры <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <div class="srv-card rv d4">
+        <div class="srv-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <span class="srv-tag">Продукт</span>
+        <h3 class="srv-title">MVP цифровых продуктов</h3>
+        <p class="srv-desc">Первая рабочая версия сервиса или digital-продукта для проверки идеи.</p>
+        <div class="srv-meta">
+          <span class="srv-time"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> от 3 недель</span>
+          <a href="#cases" class="srv-link">Примеры <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION AI IDEAS
+══════════════════════════════════════════ -->
+<section class="sec sec-dark" id="ai-ideas">
+  <div class="wrap-lg">
+    <div class="sec-center">
+      <span class="lbl rv">конкретные идеи</span>
+      <h2 class="sec-title rv d1">Идеи цифровых решений,<br>которые можно реализовать через AI</h2>
+      <p class="sec-sub rv d2" style="margin:0 auto 48px">Сегодня многие процессы можно превратить в цифровой инструмент или AI-продукт.</p>
+    </div>
+
+    <div class="ideas-grid">
+      <div class="idea-card rv d1">
+        <div class="idea-icon">🤖</div>
+        <div class="idea-title">AI-консультант для бизнеса</div>
+        <div class="idea-desc">AI-ассистент отвечает на вопросы клиентов — на сайте, в Telegram или внутри сервиса. Объясняет продукт, помогает выбрать услугу, сопровождает клиента.</div>
+        <div class="idea-tags">
+          <span class="idea-tag">Сайт</span>
+          <span class="idea-tag">Telegram</span>
+          <span class="idea-tag">AI</span>
+        </div>
+      </div>
+
+      <div class="idea-card rv d2">
+        <div class="idea-icon">📨</div>
+        <div class="idea-title">Telegram-бот для заявок</div>
+        <div class="idea-desc">Бот принимает обращения клиентов, задаёт уточняющие вопросы, отправляет информацию и передаёт клиента менеджеру. Не теряет обращений.</div>
+        <div class="idea-tags">
+          <span class="idea-tag">Заявки</span>
+          <span class="idea-tag">CRM</span>
+          <span class="idea-tag">Telegram</span>
+        </div>
+      </div>
+
+      <div class="idea-card rv d3">
+        <div class="idea-icon">🎯</div>
+        <div class="idea-title">Квиз-диагностика</div>
+        <div class="idea-desc">Клиент отвечает на вопросы и получает персональный результат. Используется для диагностики, подбора услуги, сегментации и прогрева перед продажей.</div>
+        <div class="idea-tags">
+          <span class="idea-tag">Прогрев</span>
+          <span class="idea-tag">Сегментация</span>
+          <span class="idea-tag">Продажи</span>
+        </div>
+      </div>
+
+      <div class="idea-card rv d4">
+        <div class="idea-icon">💎</div>
+        <div class="idea-title">Платный Telegram-продукт</div>
+        <div class="idea-desc">Закрытый канал, обучающий продукт или сервис с регулярным контентом. AI-сообщество с автоматической выдачей доступа.</div>
+        <div class="idea-tags">
+          <span class="idea-tag">Монетизация</span>
+          <span class="idea-tag">Подписка</span>
+          <span class="idea-tag">Telegram</span>
+        </div>
+      </div>
+
+      <div class="idea-card rv d1">
+        <div class="idea-icon">✍️</div>
+        <div class="idea-title">AI-контент-ассистент</div>
+        <div class="idea-desc">Инструмент для создания контента — генерирует идеи, пишет тексты, помогает с постами, создаёт сценарии. Для внутренней работы команды.</div>
+        <div class="idea-tags">
+          <span class="idea-tag">Контент</span>
+          <span class="idea-tag">AI</span>
+          <span class="idea-tag">Команда</span>
+        </div>
+      </div>
+
+      <div class="idea-card rv d2">
+        <div class="idea-icon">🎓</div>
+        <div class="idea-title">AI-бот для курса</div>
+        <div class="idea-desc">Бот сопровождает учеников — выдаёт уроки, отвечает на вопросы, напоминает о заданиях. Разгружает куратора без потери качества.</div>
+        <div class="idea-tags">
+          <span class="idea-tag">EdTech</span>
+          <span class="idea-tag">Автоматизация</span>
+          <span class="idea-tag">AI</span>
+        </div>
+      </div>
+
+      <div class="idea-card rv d3">
+        <div class="idea-icon">📱</div>
+        <div class="idea-title">Telegram Mini App</div>
+        <div class="idea-desc">Мини-приложение внутри Telegram: сервис, обучение, личный кабинет, инструмент для клиентов — без скачивания отдельного приложения.</div>
+        <div class="idea-tags">
+          <span class="idea-tag">Mini App</span>
+          <span class="idea-tag">Telegram</span>
+          <span class="idea-tag">UX</span>
+        </div>
+      </div>
+
+      <div class="idea-card rv d4">
+        <div class="idea-icon">🧠</div>
+        <div class="idea-title">AI-ассистент для команды</div>
+        <div class="idea-desc">Внутренний инструмент: хранит базу знаний, отвечает на вопросы сотрудников, помогает в ежедневной работе. Снижает нагрузку на руководителей.</div>
+        <div class="idea-tags">
+          <span class="idea-tag">Внутренний</span>
+          <span class="idea-tag">База знаний</span>
+          <span class="idea-tag">AI</span>
+        </div>
+      </div>
+
+      <div class="idea-card rv d1">
+        <div class="idea-icon">🧮</div>
+        <div class="idea-title">Калькулятор услуг</div>
+        <div class="idea-desc">Клиент отвечает на вопросы и получает стоимость, рекомендации или подходящий формат услуги. Отсеивает нецелевые обращения.</div>
+        <div class="idea-tags">
+          <span class="idea-tag">Интерактив</span>
+          <span class="idea-tag">Продажи</span>
+          <span class="idea-tag">UX</span>
+        </div>
+      </div>
+
+      <div class="idea-card rv d2">
+        <div class="idea-icon">⚡</div>
+        <div class="idea-title">MVP нового продукта</div>
+        <div class="idea-desc">Первая рабочая версия digital-сервиса, AI-инструмента, мини-приложения или онлайн-платформы. Позволяет протестировать идею без долгой разработки.</div>
+        <div class="idea-tags">
+          <span class="idea-tag">Стартап</span>
+          <span class="idea-tag">Быстро</span>
+          <span class="idea-tag">MVP</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pain-insight rv" style="margin-top:40px;text-align:center">
+      <p>Это лишь часть решений.</p>
+      <p>Если есть идея, задача или процесс — можно собрать решение под вашу задачу.</p>
+    </div>
+    <div style="text-align:center;margin-top:24px" class="rv">
+      <a href="#contact" class="btn btn-p">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        <span>Обсудить идею</span>
+      </a>
     </div>
   </div>
 </section>
@@ -1103,25 +1429,10 @@ footer{
 
       <!-- Биография -->
       <div class="bento-card b-bio rv d1">
-        <p>Начинала с небольших проектов для локального бизнеса. Постепенно выросла до разработки SaaS-продуктов и внедрения ИИ-решений.</p>
-        <p>Специализируюсь на пересечении трёх областей: дизайн, код и автоматизация. Это даёт клиентам одно окно вместо трёх подрядчиков.</p>
-        <p>Верю, что хороший продукт — тот, которым пользуются. Всё остальное — украшение.</p>
-      </div>
-
-      <!-- Статистика -->
-      <div class="bento-card b-stats rv d2">
-        <div class="b-stat">
-          <div class="b-stat-num">15+</div>
-          <div class="b-stat-lbl">проектов</div>
-        </div>
-        <div class="b-stat">
-          <div class="b-stat-num">3</div>
-          <div class="b-stat-lbl">года опыта</div>
-        </div>
-        <div class="b-stat">
-          <div class="b-stat-num">8</div>
-          <div class="b-stat-lbl">стран</div>
-        </div>
+        <p>Занимаюсь созданием цифровых решений для экспертов и бизнеса.</p>
+        <p>Работаю на пересечении: AI · digital-продуктов · Telegram-инструментов · автоматизации процессов.</p>
+        <p>Сейчас активно развиваюсь в направлении AI-разработки и современных подходов к созданию digital-продуктов.</p>
+        <p>Моя сильная сторона — <b style="color:#e2e8f0">системность</b>. Помогаю превратить идею в понятный рабочий инструмент.</p>
       </div>
 
       <!-- Стек -->
@@ -1153,131 +1464,127 @@ footer{
 </section>
 
 <!-- ══════════════════════════════════════════
-     SECTION 5 — КЕЙСЫ
+     SECTION 5 — КАК ЭТО ВЫГЛЯДИТ
 ══════════════════════════════════════════ -->
 <section class="sec" id="cases">
   <div class="wrap-lg">
-    <span class="lbl rv">избранные работы</span>
-    <h2 class="sec-title rv d1">Проекты, которые работают.</h2>
-    <p class="sec-sub rv d2">Не просто красивые скриншоты — конкретные результаты в цифрах.</p>
+    <span class="lbl rv">примеры из практики</span>
+    <h2 class="sec-title rv d1">Как это может выглядеть<br>в реальности</h2>
+    <p class="sec-sub rv d2">Не абстрактные возможности — конкретные сценарии с готовым решением.</p>
 
-    <div class="cases-grid">
-      <!-- Case 1 -->
-      <div class="case-card rv">
-        <div class="case-img">
-          <div class="case-img-placeholder case-img-1">🛍️</div>
-          <span class="case-tag">Лендинг</span>
-          <a href="#" class="case-link-btn" title="Открыть проект">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+    <div class="examples-grid">
+      <!-- Example 1 -->
+      <div class="example-card rv">
+        <div class="example-left">
+          <div class="example-num">01</div>
+          <div class="example-scenario">Эксперт запускает программу</div>
+          <span class="case-tag">Лендинг + Система</span>
         </div>
-        <div class="case-info">
-          <h3 class="case-title">Лендинг для онлайн-школы психологии</h3>
-          <p class="case-task">Клиент запускал новый курс. Предыдущий лендинг давал 0.6% конверсии, нужно было минимум 2%.</p>
-          <div class="case-results">
-            <div class="case-result">
-              <div class="result-icon result-up">↑</div>
-              Конверсия выросла с 0.6% до 2.8%
-            </div>
-            <div class="case-result">
-              <div class="result-icon result-down">+</div>
-              +47 заявок в первый месяц
-            </div>
-            <div class="case-result">
-              <div class="result-icon result-time">⏱</div>
-              Сделано за 11 дней
-            </div>
+        <div class="example-right">
+          <span class="example-solution-lbl">Собираем систему</span>
+          <div class="example-flow">
+            <div class="example-step"><div class="example-step-dot">🌐</div> Лендинг с описанием программы</div>
+            <div class="example-arrow">↓</div>
+            <div class="example-step"><div class="example-step-dot">🎯</div> Квиз-диагностика</div>
+            <div class="example-arrow">↓</div>
+            <div class="example-step"><div class="example-step-dot">🤖</div> Telegram-бот для заявок и оплаты</div>
+            <div class="example-arrow">↓</div>
+            <div class="example-step"><div class="example-step-dot">📚</div> Автоматическая выдача материалов</div>
           </div>
-          <a href="#contact" class="btn btn-s" style="font-size:.83rem;padding:10px 20px">Обсудить похожую задачу →</a>
+          <div class="example-result">
+            Клиент проходит путь:<br>
+            <b>Сайт → диагностика → заявка → оплата → сопровождение</b><br>
+            — автоматически, без ручной работы
+          </div>
         </div>
       </div>
 
-      <!-- Case 2 -->
-      <div class="case-card rv d1">
-        <div class="case-img">
-          <div class="case-img-placeholder case-img-2">⚙️</div>
-          <span class="case-tag">Приложение</span>
-          <a href="#" class="case-link-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+      <!-- Example 2 -->
+      <div class="example-card rv d1">
+        <div class="example-left">
+          <div class="example-num">02</div>
+          <div class="example-scenario">Эксперт отвечает на одинаковые вопросы каждый день</div>
+          <span class="case-tag">AI-ассистент</span>
         </div>
-        <div class="case-info">
-          <h3 class="case-title">CRM для сети автосервисов</h3>
-          <p class="case-task">Команда из 12 менеджеров работала в Excel. Данные терялись, аналитики не было, время на отчёты — 6 часов в неделю.</p>
-          <div class="case-results">
-            <div class="case-result">
-              <div class="result-icon result-down">↓</div>
-              Время на отчёты: с 6 ч до 20 мин
-            </div>
-            <div class="case-result">
-              <div class="result-icon result-up">↑</div>
-              Скорость обработки заявок +3×
-            </div>
-            <div class="case-result">
-              <div class="result-icon result-time">⏱</div>
-              MVP запущен за 5 недель
-            </div>
+        <div class="example-right">
+          <span class="example-solution-lbl">Решение</span>
+          <div class="example-flow">
+            <div class="example-step"><div class="example-step-dot">🧠</div> AI-ассистент на базе материалов эксперта</div>
+            <div class="example-arrow">↓</div>
+            <div class="example-step"><div class="example-step-dot">💬</div> Telegram-бот принимает вопросы клиентов</div>
+            <div class="example-arrow">↓</div>
+            <div class="example-step"><div class="example-step-dot">⚡</div> Клиент получает ответы мгновенно</div>
+            <div class="example-arrow">↓</div>
+            <div class="example-step"><div class="example-step-dot">👤</div> Эксперт подключается только на сложных этапах</div>
           </div>
-          <a href="#contact" class="btn btn-s" style="font-size:.83rem;padding:10px 20px">Обсудить похожую задачу →</a>
+          <div class="example-result">
+            Экономия времени эксперта — <b>20+ часов в неделю</b> на типовых консультациях
+          </div>
         </div>
       </div>
 
-      <!-- Case 3 -->
-      <div class="case-card rv d2">
-        <div class="case-img">
-          <div class="case-img-placeholder case-img-3">🤖</div>
-          <span class="case-tag">ИИ-агент</span>
-          <a href="#" class="case-link-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
+      <!-- Example 3 -->
+      <div class="example-card rv d2">
+        <div class="example-left">
+          <div class="example-num">03</div>
+          <div class="example-scenario">Есть идея нового сервиса</div>
+          <span class="case-tag">MVP</span>
         </div>
-        <div class="case-info">
-          <h3 class="case-title">ИИ-ассистент для юридической компании</h3>
-          <p class="case-task">Менеджеры тратили 4 часа в день на типовые вопросы от клиентов. Нужен был бот на базе документов компании.</p>
-          <div class="case-results">
-            <div class="case-result">
-              <div class="result-icon result-up">↑</div>
-              80% типовых вопросов закрывает бот
-            </div>
-            <div class="case-result">
-              <div class="result-icon result-down">↓</div>
-              Экономия: 22 часа в неделю
-            </div>
-            <div class="case-result">
-              <div class="result-icon result-time">⏱</div>
-              Готово за 8 дней
-            </div>
+        <div class="example-right">
+          <span class="example-solution-lbl">Создаём MVP</span>
+          <div class="example-flow">
+            <div class="example-step"><div class="example-step-dot">💡</div> Разбираем идею и формируем структуру</div>
+            <div class="example-arrow">↓</div>
+            <div class="example-step"><div class="example-step-dot">🔧</div> Собираем первую рабочую версию</div>
+            <div class="example-arrow">↓</div>
+            <div class="example-step"><div class="example-step-dot">🚀</div> Запускаем и тестируем на реальных пользователях</div>
           </div>
-          <a href="#contact" class="btn btn-s" style="font-size:.83rem;padding:10px 20px">Обсудить похожую задачу →</a>
+          <div class="example-result">
+            Проверяем идею <b>без долгой разработки</b> — быстро, дёшево, с реальной обратной связью
+          </div>
         </div>
       </div>
     </div>
 
     <div style="text-align:center;margin-top:40px" class="rv">
-      <a href="https://github.com/almirasultabova" target="_blank" class="btn btn-s">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-        Смотреть код на GitHub
-      </a>
+      <a href="#contact" class="btn btn-s">Обсудить похожую задачу →</a>
     </div>
   </div>
 </section>
 
 <!-- ══════════════════════════════════════════
-     MID CTA
+     МОЙ ПОДХОД
 ══════════════════════════════════════════ -->
-<div class="mid-cta">
-  <div class="mid-cta-inner rv">
-    <h2>Есть похожая задача?</h2>
-    <p>Расскажите в двух словах — предложу решение и стоимость бесплатно.</p>
-    <div class="btn-row">
-      <a href="#contact" class="btn-white">Обсудить проект</a>
-      <a href="https://t.me/Almira_Sultanova" target="_blank" class="btn-ghost">
-        <svg style="display:inline;vertical-align:middle;margin-right:6px" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
-        Написать в Telegram
-      </a>
+<section class="sec sec-grad" id="approach">
+  <div class="wrap">
+    <div class="sec-center">
+      <span class="lbl rv">принцип работы</span>
+      <h2 class="sec-title rv d1">Мой подход<br>к созданию решений</h2>
+    </div>
+
+    <div class="approach-text rv d1">
+      <p>Я не продаю отдельные инструменты.</p>
+      <p>Я помогаю собрать <b style="color:#fff">систему под вашу задачу</b>.</p>
+      <p style="margin-top:16px">Иногда это просто лендинг. Иногда — бот. Иногда — AI-ассистент.<br>А иногда — целая связка инструментов:</p>
+    </div>
+
+    <div class="approach-flow rv d2">
+      <span class="approach-node">Сайт</span>
+      <span class="approach-arr">→</span>
+      <span class="approach-node">Квиз</span>
+      <span class="approach-arr">→</span>
+      <span class="approach-node">Бот</span>
+      <span class="approach-arr">→</span>
+      <span class="approach-node">Подписка</span>
+      <span class="approach-arr">→</span>
+      <span class="approach-node">Автоматизация</span>
+    </div>
+
+    <div class="approach-text rv d3" style="font-size:.97rem;margin-bottom:0">
+      <p>Главная задача — <b style="color:#fff">чтобы это работало в реальности</b>, а не просто красиво выглядело.</p>
     </div>
   </div>
-</div>
+</section>
 
 <!-- ══════════════════════════════════════════
      SECTION 6 — ПРОЦЕСС
@@ -1286,49 +1593,68 @@ footer{
   <div class="wrap-lg">
     <div class="sec-center">
       <span class="lbl rv">как я работаю</span>
-      <h2 class="sec-title rv d1">Никаких сюрпризов.<br>Только система.</h2>
-      <p class="sec-sub rv d2" style="margin-left:auto;margin-right:auto">Пять шагов от первого контакта до запуска. Вы знаете, что происходит на каждом этапе.</p>
+      <h2 class="sec-title rv d1">От задачи — к системе.<br>Четыре шага.</h2>
+      <p class="sec-sub rv d2" style="margin-left:auto;margin-right:auto">Понятный процесс без лишних этапов. Вы знаете, что происходит на каждом шаге.</p>
     </div>
 
     <div class="process-grid rv d2">
       <div class="proc-step">
         <div class="proc-dot">1</div>
         <div class="proc-num">Шаг 1</div>
-        <div class="proc-title">Discovery-звонок</div>
-        <div class="proc-desc">Разбираемся в задаче, целях и ожиданиях. Бесплатно, без обязательств.</div>
+        <div class="proc-title">Разбор задачи</div>
+        <div class="proc-desc">Смотрим на вашу ситуацию: продукт, аудиторию, процессы, идеи.</div>
         <span class="proc-time">30 мин · бесплатно</span>
       </div>
       <div class="proc-step">
         <div class="proc-dot">2</div>
         <div class="proc-num">Шаг 2</div>
-        <div class="proc-title">Бриф и предложение</div>
-        <div class="proc-desc">Получаете план работ, сроки и фиксированную стоимость. Без скрытых платежей.</div>
+        <div class="proc-title">Архитектура решения</div>
+        <div class="proc-desc">Предлагаю структуру системы — лендинг, квиз, бот, AI-ассистент, подписка или сервис.</div>
         <span class="proc-time">1–2 дня</span>
       </div>
       <div class="proc-step">
         <div class="proc-dot">3</div>
         <div class="proc-num">Шаг 3</div>
-        <div class="proc-title">Дизайн и прототип</div>
-        <div class="proc-desc">Макеты в Figma — смотрите, правим, согласовываем. Разработка — только после «ок».</div>
-        <span class="proc-time">1–2 недели</span>
+        <div class="proc-title">Создание</div>
+        <div class="proc-desc">Собираем рабочий цифровой инструмент. Telegram-чат и прозрачный прогресс на всём проекте.</div>
+        <span class="proc-time">1–8 недель</span>
       </div>
       <div class="proc-step">
         <div class="proc-dot">4</div>
         <div class="proc-num">Шаг 4</div>
-        <div class="proc-title">Разработка</div>
-        <div class="proc-desc">Демо каждые 2 недели. Вы всегда видите прогресс. Telegram-чат на всём проекте.</div>
-        <span class="proc-time">2–8 недель</span>
-      </div>
-      <div class="proc-step">
-        <div class="proc-dot">5</div>
-        <div class="proc-num">Шаг 5</div>
-        <div class="proc-title">Запуск и поддержка</div>
-        <div class="proc-desc">Размещение, настройка, обучение команды. Правки бесплатно 30 дней после запуска.</div>
+        <div class="proc-title">Внедрение</div>
+        <div class="proc-desc">Инструмент начинает работать в бизнесе. Правки бесплатно 30 дней после запуска.</div>
         <span class="proc-time">30 дней гарантии</span>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ══════════════════════════════════════════
+     STRONG QUOTE
+══════════════════════════════════════════ -->
+<div class="strong-block">
+  <div class="rv">
+    <p class="strong-quote">Я не продаю отдельные инструменты.<br><span>Я помогаю собрать цифровое решение под вашу задачу.</span></p>
+    <p class="strong-sub">Это мгновенно меняет восприятие.</p>
+  </div>
+  <div class="rv d1">
+    <p class="strong-tasks-label">Какие задачи можно решить через AI</p>
+    <div class="strong-tasks">
+      <span class="strong-task">Автоматизировать заявки</span>
+      <span class="strong-task">Создать AI-консультанта</span>
+      <span class="strong-task">Запустить Telegram-продукт</span>
+      <span class="strong-task">Сделать подписочный сервис</span>
+      <span class="strong-task">Создать новый digital-продукт</span>
+    </div>
+  </div>
+  <div style="text-align:center" class="rv d2">
+    <a href="#contact" class="btn btn-p pulse">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      <span>Обсудить вашу задачу</span>
+    </a>
+  </div>
+</div>
 
 <!-- ══════════════════════════════════════════
      SECTION 7 — ОТЗЫВЫ
@@ -1402,47 +1728,47 @@ footer{
     <div class="faq-list rv d2">
       <div class="faq-item open">
         <button class="faq-q">
-          Сколько стоит разработка?
+          Что можно создать?
           <div class="faq-icon">+</div>
         </button>
         <div class="faq-a">
-          <p class="faq-text">Лендинг — от 30 000 ₽, веб-приложение — от 80 000 ₽, ИИ-агент — от 15 000 ₽. Точную стоимость называю после разбора задачи на звонке. Никаких доплат «по факту» — стоимость фиксируется в договоре.</p>
+          <p class="faq-text">Сайт, Telegram-бот, AI-ассистента, подписочный продукт, квиз, калькулятор, Mini App или digital-продукт — под вашу конкретную задачу.</p>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-q">
-          Сколько длится разработка?
+          Можно ли сделать платный Telegram-продукт?
           <div class="faq-icon">+</div>
         </button>
         <div class="faq-a">
-          <p class="faq-text">Лендинг — 2–3 недели. Веб-приложение (MVP) — 4–8 недель. ИИ-агент — 1–2 недели. Сроки фиксируются в договоре и не меняются без вашего согласия.</p>
+          <p class="faq-text">Да. Закрытый канал, обучающий продукт, сервис с подпиской или AI-сообщество — настраиваю под ваш формат с автоматической выдачей доступа и приёмом оплаты.</p>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-q">
-          Что если мне не понравится результат?
+          Если есть только идея — можно начать?
           <div class="faq-icon">+</div>
         </button>
         <div class="faq-a">
-          <p class="faq-text">Правки включены на каждом этапе до согласования. После запуска — 30 дней бесплатных правок. Разработка начинается только после вашего «ок» на макетах.</p>
+          <p class="faq-text">Да. Можно начать с MVP — первой рабочей версии, которая позволяет проверить идею без долгой разработки. Разбираем идею вместе и определяем минимально нужное решение.</p>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-q">
-          Вы работаете по договору?
+          Можно ли добавить AI в существующий продукт?
           <div class="faq-icon">+</div>
         </button>
         <div class="faq-a">
-          <p class="faq-text">Да. Договор обязателен для всех проектов. Работаю с ИП и юридическими лицами, предоставляю закрывающие документы. Оплата поэтапная: предоплата 50%, остаток — после сдачи.</p>
+          <p class="faq-text">Да. AI-ассистента можно интегрировать в любой сайт, CRM, Telegram-канал или мессенджер. Покажите что есть — предложу оптимальное решение.</p>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-q">
-          Можно ли внедрить ИИ в существующий сайт?
+          Сколько стоит и как долго?
           <div class="faq-icon">+</div>
         </button>
         <div class="faq-a">
-          <p class="faq-text">Да. ИИ-агента можно интегрировать в любой работающий сайт, CRM или мессенджер. Покажите что есть — предложу оптимальное решение.</p>
+          <p class="faq-text">Лендинг — от 30 000 ₽ (2–3 нед.). Telegram-бот — от 15 000 ₽ (1–2 нед.). AI-ассистент — от 20 000 ₽ (1–2 нед.). MVP — от 80 000 ₽ (3–8 нед.). Точную стоимость и сроки называю после разбора задачи.</p>
         </div>
       </div>
       <div class="faq-item">
@@ -1451,25 +1777,7 @@ footer{
           <div class="faq-icon">+</div>
         </button>
         <div class="faq-a">
-          <p class="faq-text">Да, работаю с клиентами из СНГ, Европы и других стран. Оплата — USDT, Wise, банковский перевод. Документы и коммуникация — на русском или английском.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">
-          Нужен ли дизайн отдельно?
-          <div class="faq-icon">+</div>
-        </button>
-        <div class="faq-a">
-          <p class="faq-text">Нет. Дизайн, разработка и тестирование — единый процесс. Всё включено в стоимость. Если у вас уже есть дизайн в Figma — это ускорит работу и снизит стоимость.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">
-          Что вы не делаете?
-          <div class="faq-icon">+</div>
-        </button>
-        <div class="faq-a">
-          <p class="faq-text">Не берусь за задачи, в которых не могу гарантировать результат. Если задача не в моей компетенции — честно скажу и порекомендую подходящего специалиста.</p>
+          <p class="faq-text">Да, работаю с клиентами из СНГ, Европы и других стран. Оплата — USDT, Wise, банковский перевод. Коммуникация — на русском или английском.</p>
         </div>
       </div>
     </div>
@@ -1483,14 +1791,14 @@ footer{
   <div class="wrap">
     <div class="sec-center">
       <span class="lbl rv">начать проект</span>
-      <h2 class="sec-title rv d1">Есть задача?<br>Разберём её вместе.</h2>
-      <p class="sec-sub rv d2" style="margin:0 auto 56px">Расскажите в двух словах — предложу решение и стоимость бесплатно.</p>
+      <h2 class="sec-title rv d1">Если есть идея — её можно<br>превратить в цифровой инструмент</h2>
+      <p class="sec-sub rv d2" style="margin:0 auto 56px">Напишите мне: что за продукт, какая задача, что сейчас не работает. Я помогу понять, какое решение подойдёт лучше всего.</p>
     </div>
 
     <div class="contact-grid">
       <div class="rv">
-        <h3 class="contact-info" style="font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:10px">Или напишите напрямую</h3>
-        <p style="font-size:.92rem;color:var(--muted);margin-bottom:24px;line-height:1.7">Без лишних формальностей — просто расскажите задачу в Telegram, и я отвечу.</p>
+        <h3 class="contact-info" style="font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:10px">Написать напрямую в Telegram</h3>
+        <p style="font-size:.92rem;color:var(--muted);margin-bottom:24px;line-height:1.7">Расскажите: что за продукт, какая задача, что сейчас не работает. Отвечу и помогу разобраться.</p>
         <a href="https://t.me/Almira_Sultanova" target="_blank" class="contact-tg">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
           Написать в Telegram
