@@ -75,9 +75,9 @@ html[data-theme="light"]{
   --grad-text: linear-gradient(135deg,#1e1b4b 0%,#4f46e5 50%,#0891b2 100%)
 }
 html[data-theme="light"] body{background:#F5F7FF;color:#0f172a}
-html[data-theme="light"] .hero{background:linear-gradient(160deg,#eef1ff 0%,#f5f7ff 60%,#e0f2fe 100%)}
-html[data-theme="light"] #hero-canvas{opacity:.35}
-html[data-theme="light"] .hero-orb{filter:blur(90px) brightness(1.5)}
+html[data-theme="light"] .hero{background:linear-gradient(160deg,#f0f2ff 0%,#f8f9ff 60%,#edf6ff 100%)}
+html[data-theme="light"] #hero-canvas{opacity:.12}
+html[data-theme="light"] .hero-orb{filter:blur(110px);opacity:.18}
 html[data-theme="light"] .nav.scrolled{background:rgba(245,247,255,.92)}
 html[data-theme="light"] .mobile-menu{background:rgba(245,247,255,.98)}
 html[data-theme="light"] .sec-dark{background:#eef1ff}
@@ -104,8 +104,13 @@ html[data-theme="light"] .sec-title{
   -webkit-background-clip:text;-webkit-text-fill-color:transparent
 }
 html[data-theme="light"] .hero-h1{
-  background:linear-gradient(90deg,#1e1b4b 0%,#4f46e5 35%,#0891b2 60%,#4f46e5 85%,#1e1b4b 100%);
-  background-size:250% 100%
+  background:linear-gradient(135deg,#1e1b4b 0%,#4f46e5 55%,#0891b2 100%);
+  background-size:100% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  filter:none;
+  animation:fade-up .9s cubic-bezier(.16,1,.3,1) .3s forwards
 }
 /* ── Светло-серые тексты → читаемые ── */
 html[data-theme="light"] .hero-desc,
