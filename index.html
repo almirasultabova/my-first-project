@@ -27,7 +27,8 @@ body{
 }
 img{display:block;max-width:100%}
 a{text-decoration:none;color:inherit}
-button{font-family:inherit;cursor:pointer;border:none;background:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;touch-action:manipulation}
+a{touch-action:manipulation}
 ul{list-style:none}
 
 /* ══════════════════════════════════════════
@@ -791,8 +792,9 @@ ul{list-style:none}
   padding:16px 18px;
   background:var(--bg3);border:1px solid var(--border);
   border-radius:var(--radius-sm);
-  color:var(--txt);font-size:.93rem;font-family:inherit;
+  color:var(--txt);font-size:1rem;font-family:inherit;
   outline:none;resize:none;
+  -webkit-appearance:none;
   transition:border-color var(--transition),box-shadow var(--transition)
 }
 .field input::placeholder,.field textarea::placeholder{color:var(--muted)}
@@ -805,13 +807,62 @@ ul{list-style:none}
   font-size:.75rem;color:var(--muted);margin-top:12px
 }
 .form-success{
-  display:none;text-align:center;padding:32px;
-  background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);
+  display:none;text-align:center;padding:40px 32px;
+  background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.18);
   border-radius:var(--radius);
 }
-.form-success .success-icon{font-size:2.5rem;margin-bottom:12px}
-.form-success h3{color:#4ade80;font-size:1.1rem;margin-bottom:8px}
-.form-success p{color:var(--muted);font-size:.9rem}
+.form-success.show{
+  display:block;
+  animation:success-pop .5s cubic-bezier(.16,1,.3,1) forwards
+}
+@keyframes success-pop{
+  from{opacity:0;transform:scale(.92) translateY(12px)}
+  to{opacity:1;transform:scale(1) translateY(0)}
+}
+.success-checkmark{width:72px;height:72px;margin:0 auto 20px}
+.success-checkmark svg{width:72px;height:72px}
+.check-circle{
+  stroke:#4ade80;stroke-width:2;fill:none;
+  stroke-dasharray:157;stroke-dashoffset:157;
+  animation:draw-circle .55s ease forwards .15s
+}
+.check-tick{
+  stroke:#4ade80;stroke-width:3;fill:none;
+  stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:40;stroke-dashoffset:40;
+  animation:draw-tick .35s ease forwards .7s
+}
+@keyframes draw-circle{to{stroke-dashoffset:0}}
+@keyframes draw-tick{to{stroke-dashoffset:0}}
+.form-success h3{
+  color:#4ade80;font-size:1.15rem;font-weight:700;margin-bottom:8px;
+  opacity:0;animation:fade-up .4s ease forwards .9s
+}
+.form-success p{
+  color:var(--muted);font-size:.9rem;line-height:1.6;
+  opacity:0;animation:fade-up .4s ease forwards 1.1s
+}
+
+/* ══════════════════════════════════════════
+   BACK TO TOP
+══════════════════════════════════════════ */
+.btn-top{
+  position:fixed;bottom:24px;left:24px;z-index:90;
+  width:46px;height:46px;border-radius:50%;
+  background:var(--bg3);border:1px solid var(--border2);
+  color:var(--muted);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transform:translateY(10px) scale(.85);pointer-events:none;
+  transition:opacity .35s ease,transform .35s ease,background .25s,border-color .25s,color .25s,box-shadow .25s
+}
+.btn-top.on{opacity:1;transform:translateY(0) scale(1);pointer-events:all}
+.btn-top:hover{
+  background:var(--p);border-color:var(--p);color:#fff;
+  box-shadow:var(--glow-p);transform:translateY(-3px) scale(1.08)
+}
+@media(max-width:480px){
+  .btn-top{bottom:80px;left:16px;width:42px;height:42px}
+}
 
 /* ══════════════════════════════════════════
    FOOTER
@@ -856,13 +907,17 @@ footer{
    FLOATING CTA
 ══════════════════════════════════════════ */
 .float-cta{
-  position:fixed;bottom:24px;right:24px;z-index:90;
+  position:fixed;
+  bottom:calc(24px + env(safe-area-inset-bottom));
+  right:24px;z-index:90;
   opacity:0;transform:translateY(16px);pointer-events:none;
   transition:all .4s ease
 }
 .float-cta.on{opacity:1;transform:translateY(0);pointer-events:all}
 .float-cta .btn{font-size:.83rem;padding:11px 20px;box-shadow:0 4px 20px rgba(0,0,0,.4)}
-@media(max-width:480px){.float-cta{bottom:16px;right:16px}}
+@media(max-width:480px){
+  .float-cta{bottom:calc(16px + env(safe-area-inset-bottom));right:16px}
+}
 
 /* ══════════════════════════════════════════
    AI IDEAS SECTION
@@ -1867,9 +1922,14 @@ footer{
           </div>
         </form>
         <div class="form-success" id="formSuccess">
-          <div class="success-icon">✅</div>
+          <div class="success-checkmark">
+            <svg viewBox="0 0 52 52">
+              <circle class="check-circle" cx="26" cy="26" r="24"/>
+              <path class="check-tick" d="M14 26l8 8 16-16"/>
+            </svg>
+          </div>
           <h3>Telegram открыт!</h3>
-          <p>Сообщение уже готово — просто нажмите «Отправить» в Telegram. Отвечу в течение 2 часов.</p>
+          <p>Сообщение уже готово — просто нажмите «Отправить» в Telegram.<br>Отвечу в течение 2 часов.</p>
         </div>
       </div>
     </div>
@@ -1905,6 +1965,11 @@ footer{
   </div>
   <div class="footer-copy">© 2026 Альмира Султанова · Все права защищены</div>
 </footer>
+
+<!-- BACK TO TOP -->
+<button class="btn-top" id="btnTop" aria-label="Наверх">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
 
 <!-- FLOATING CTA -->
 <div class="float-cta" id="floatCta">
@@ -2070,7 +2135,8 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
   window.open('https://t.me/Almira_Sultanova?text='+encodeURIComponent(msg),'_blank');
   setTimeout(()=>{
     this.style.display='none';
-    document.getElementById('formSuccess').style.display='block'
+    const s=document.getElementById('formSuccess');
+    s.classList.add('show')
   },800)
 });
 
@@ -2104,6 +2170,17 @@ const staggerIO=new IntersectionObserver(entries=>{
   })
 },{threshold:.2});
 document.querySelectorAll('.tags,.process-grid,.pain-grid').forEach(el=>staggerIO.observe(el));
+
+/* ══════════════════════════════════════
+   BACK TO TOP
+══════════════════════════════════════ */
+const btnTop=document.getElementById('btnTop');
+window.addEventListener('scroll',()=>{
+  btnTop.classList.toggle('on',window.scrollY>600)
+},{passive:true});
+btnTop.addEventListener('click',()=>{
+  window.scrollTo({top:0,behavior:'smooth'})
+});
 
 /* ══════════════════════════════════════
    PARALLAX HERO
