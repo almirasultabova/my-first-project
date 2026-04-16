@@ -1,0 +1,2813 @@
+{
+  "version": "2.11",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": -1951,
+      "y": 371,
+      "name": "Сайт",
+      "clip": true,
+      "width": 3200,
+      "height": 3000,
+      "fill": "#FFFFFF",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "dLPGh",
+          "x": 0,
+          "y": 0,
+          "name": "Index Page",
+          "width": 1488,
+          "fill": "#F4F7FF",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "CqueA",
+              "name": "Nav",
+              "width": "fill_container",
+              "height": 72,
+              "fill": "#FBFCFFE6",
+              "padding": [
+                0,
+                80
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "n8W42",
+                  "name": "brand",
+                  "fill": "#18233B",
+                  "content": "Almira Sultanova",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "800",
+                  "letterSpacing": 0.01
+                },
+                {
+                  "type": "frame",
+                  "id": "J8mK8",
+                  "name": "navLinks",
+                  "gap": 28,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "7K4cZ",
+                      "name": "link1",
+                      "fill": "#66748F",
+                      "content": "Задачи",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "PrUWC",
+                      "name": "link2",
+                      "fill": "#66748F",
+                      "content": "Решения",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "wGBFj",
+                      "name": "link3",
+                      "fill": "#66748F",
+                      "content": "Диагностика",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ghnNY",
+                      "name": "link4",
+                      "fill": "#66748F",
+                      "content": "Процесс",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "eMy0t",
+                      "name": "link5",
+                      "fill": "#66748F",
+                      "content": "Кейсы",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "4UE5F",
+                      "name": "link6",
+                      "fill": "#66748F",
+                      "content": "FAQ",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "IMBFr",
+                  "name": "ctaNav",
+                  "height": 44,
+                  "fill": "#356BFF",
+                  "cornerRadius": 999,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#356BFF38",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 20
+                  },
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "3jrzc",
+                      "name": "ctaNavText",
+                      "fill": "#FFFFFF",
+                      "content": "Подобрать старт",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Ic1v2",
+              "name": "Hero Section",
+              "width": "fill_container",
+              "gap": 28,
+              "padding": [
+                56,
+                80,
+                72,
+                80
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "HL2WR",
+                  "name": "Hero Content",
+                  "width": "fill_container",
+                  "fill": "#FFFFFFEB",
+                  "cornerRadius": 20,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#2C4CA01A",
+                    "offset": {
+                      "x": 0,
+                      "y": 22
+                    },
+                    "blur": 54
+                  },
+                  "layout": "vertical",
+                  "gap": 24,
+                  "padding": 40,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fQzkS",
+                      "name": "eyebrow",
+                      "fill": "#356BFF",
+                      "content": "Понятный выбор digital-решений",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.12
+                    },
+                    {
+                      "type": "text",
+                      "id": "c4hKp",
+                      "name": "heroTitle",
+                      "fill": "#18233B",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Не просто делаю сайты и AI-инструменты, а помогаю понять, что именно нужно вашему бизнесу",
+                      "lineHeight": 1.05,
+                      "fontFamily": "Inter",
+                      "fontSize": 44,
+                      "fontWeight": "800",
+                      "letterSpacing": -0.03
+                    },
+                    {
+                      "type": "text",
+                      "id": "U9NOy",
+                      "name": "heroSubtitle",
+                      "fill": "#66748F",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Сайт, бот, приложение, AI-агент и автоматизация решают разные задачи. Я помогаю разобраться в разнице и собрать решение, которое подходит именно вашей ситуации.",
+                      "lineHeight": 1.7,
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "du5qT",
+                      "name": "Hero Actions",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "WscYz",
+                          "name": "btnPrimary",
+                          "height": 52,
+                          "fill": "#356BFF",
+                          "cornerRadius": 999,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "#356BFF3D",
+                            "offset": {
+                              "x": 0,
+                              "y": 12
+                            },
+                            "blur": 30
+                          },
+                          "padding": [
+                            0,
+                            24
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "4kT53",
+                              "name": "btnPrimaryTxt",
+                              "fill": "#FFFFFF",
+                              "content": "Пройти диагностику",
+                              "fontFamily": "Inter",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "iEPkQ",
+                          "name": "btnSecondary",
+                          "height": 52,
+                          "fill": "#FFFFFF6B",
+                          "cornerRadius": 999,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#1C274020"
+                          },
+                          "padding": [
+                            0,
+                            24
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "sH4K0",
+                              "name": "btnSecondaryTxt",
+                              "fill": "#18233B",
+                              "content": "Обсудить мою задачу",
+                              "fontFamily": "Inter",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ICOET",
+                      "name": "Hero Points",
+                      "layout": "vertical",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "pypoI",
+                          "name": "pt1",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": 500,
+                          "content": "→  Помогаю выбрать не «технологию», а правильный инструмент под задачу.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "HbzxD",
+                          "name": "pt2",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": 500,
+                          "content": "→  Объясняю разницу простым языком, без перегруза терминами.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "QxOBr",
+                          "name": "pt3",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": 500,
+                          "content": "→  Работаю прозрачно: понятные этапы, спокойная коммуникация, ясный старт.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "sQgnp",
+                  "name": "Hero Aside",
+                  "width": 480,
+                  "fill": "#356BFF",
+                  "cornerRadius": 20,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#2C4CA01A",
+                    "offset": {
+                      "x": 0,
+                      "y": 22
+                    },
+                    "blur": 54
+                  },
+                  "layout": "vertical",
+                  "gap": 24,
+                  "padding": 40,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "uabhN",
+                      "name": "asideTag",
+                      "fill": "#FFFFFF26",
+                      "cornerRadius": 999,
+                      "padding": [
+                        6,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "6QBjF",
+                          "name": "asideTagTxt",
+                          "fill": "#FFFFFFCC",
+                          "content": "Работаю лично",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "bOjIh",
+                      "name": "asideName",
+                      "fill": "#FFFFFF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "AI-разработчик и digital-архитектор",
+                      "lineHeight": 1.1,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "MTom6",
+                      "name": "asideDesc",
+                      "fill": "#FFFFFFB3",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Помогаю выбрать правильный формат решения, а не просто собрать «что-то технологичное».",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "J16BG",
+                      "name": "asideDivider",
+                      "fill": "#FFFFFF26",
+                      "width": "fill_container",
+                      "height": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "K4e0a",
+                      "name": "asideStats",
+                      "width": "fill_container",
+                      "gap": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "dKioe",
+                          "name": "stat1",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "iCepq",
+                              "name": "stat1Num",
+                              "fill": "#FFFFFF",
+                              "content": "3",
+                              "fontFamily": "Inter",
+                              "fontSize": 36,
+                              "fontWeight": "800"
+                            },
+                            {
+                              "type": "text",
+                              "id": "fN3ps",
+                              "name": "stat1Label",
+                              "fill": "#FFFFFFB3",
+                              "content": "Кейса в работе",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "gxaov",
+                          "name": "stat2",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "3XElm",
+                              "name": "stat2Num",
+                              "fill": "#FFFFFF",
+                              "content": "Сайт + бот + логика",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "800"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Yg8yR",
+                              "name": "stat2Label",
+                              "fill": "#FFFFFFB3",
+                              "content": "Не отдельные услуги, а связанное решение",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "rarub",
+              "name": "Chips Section",
+              "width": "fill_container",
+              "gap": 20,
+              "padding": [
+                0,
+                80,
+                56,
+                80
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "uodeN",
+                  "name": "chip1",
+                  "width": "fill_container",
+                  "fill": "#FFFFFFEB",
+                  "cornerRadius": 16,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#2C4CA00D",
+                    "offset": {
+                      "x": 0,
+                      "y": 12
+                    },
+                    "blur": 28
+                  },
+                  "gap": 16,
+                  "padding": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "hsvAr",
+                      "name": "chip1Icon",
+                      "width": 44,
+                      "height": 44,
+                      "fill": "#EEF4FF",
+                      "cornerRadius": 12,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "yztUU",
+                          "name": "chip1IconGlyph",
+                          "width": 22,
+                          "height": 22,
+                          "iconFontName": "bot",
+                          "iconFontFamily": "lucide",
+                          "fill": "#356BFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xWOcR",
+                      "name": "chip1Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "YZdM7",
+                          "name": "chip1Title",
+                          "fill": "#18233B",
+                          "content": "Telegram-боты",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "kpIit",
+                          "name": "chip1Text",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Воронки, запись, ответы и автоматическое сопровождение.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rWa9S",
+                  "name": "chip2",
+                  "width": "fill_container",
+                  "fill": "#FFFFFFEB",
+                  "cornerRadius": 16,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#2C4CA00D",
+                    "offset": {
+                      "x": 0,
+                      "y": 12
+                    },
+                    "blur": 28
+                  },
+                  "gap": 16,
+                  "padding": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "q7fOD",
+                      "name": "chip2Icon",
+                      "width": 44,
+                      "height": 44,
+                      "fill": "#EEF4FF",
+                      "cornerRadius": 12,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "638ZL",
+                          "name": "chip2IconGlyph",
+                          "width": 22,
+                          "height": 22,
+                          "iconFontName": "globe",
+                          "iconFontFamily": "lucide",
+                          "fill": "#356BFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "0fbNZ",
+                      "name": "chip2Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "GUN4v",
+                          "name": "chip2Title",
+                          "fill": "#18233B",
+                          "content": "Сайты и лендинги",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "C10V7",
+                          "name": "chip2Text",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Быстрая и понятная упаковка услуг, которая ведёт к заявке.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rWAkZ",
+                  "name": "chip3",
+                  "width": "fill_container",
+                  "fill": "#FFFFFFEB",
+                  "cornerRadius": 16,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#2C4CA00D",
+                    "offset": {
+                      "x": 0,
+                      "y": 12
+                    },
+                    "blur": 28
+                  },
+                  "gap": 16,
+                  "padding": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "k8FQz",
+                      "name": "chip3Icon",
+                      "width": 44,
+                      "height": 44,
+                      "fill": "#EEF4FF",
+                      "cornerRadius": 12,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "BS52y",
+                          "name": "chip3IconGlyph",
+                          "width": 22,
+                          "height": 22,
+                          "iconFontName": "cpu",
+                          "iconFontFamily": "lucide",
+                          "fill": "#356BFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "edRhG",
+                      "name": "chip3Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dTF73",
+                          "name": "chip3Title",
+                          "fill": "#18233B",
+                          "content": "AI и автоматизация",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ZJith",
+                          "name": "chip3Text",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Умные сценарии, которые помогают бизнесу работать быстрее.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "nQJoR",
+              "name": "Value Section",
+              "width": "fill_container",
+              "fill": "#EDF2FF",
+              "layout": "vertical",
+              "gap": 40,
+              "padding": [
+                56,
+                80
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "BPVas",
+                  "name": "valueHeader",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "04u9C",
+                      "name": "valueTitle",
+                      "fill": "#18233B",
+                      "content": "Что вы получите",
+                      "lineHeight": 1.1,
+                      "fontFamily": "Inter",
+                      "fontSize": 36,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RMFkC",
+                  "name": "Value Grid",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "qWcPf",
+                      "name": "val1",
+                      "width": "fill_container",
+                      "fill": "#FFFFFFEB",
+                      "cornerRadius": 20,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#2C4CA00D",
+                        "offset": {
+                          "x": 0,
+                          "y": 12
+                        },
+                        "blur": 28
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "YlvgV",
+                          "name": "val1Icon",
+                          "width": 48,
+                          "height": 48,
+                          "fill": "#EEF4FF",
+                          "cornerRadius": 14,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "hKe7L",
+                              "name": "val1Glyph",
+                              "width": 24,
+                              "height": 24,
+                              "iconFontName": "zap",
+                              "iconFontFamily": "lucide",
+                              "fill": "#356BFF"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "3v8hG",
+                          "name": "val1Title",
+                          "fill": "#18233B",
+                          "content": "Меньше рутины",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "x1v2o",
+                          "name": "val1Text",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Повторяющихся действий становится меньше, а работа двигается быстрее.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FzFfG",
+                      "name": "val2",
+                      "width": "fill_container",
+                      "fill": "#356BFF",
+                      "cornerRadius": 20,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#356BFF26",
+                        "offset": {
+                          "x": 0,
+                          "y": 12
+                        },
+                        "blur": 28
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "PCtlX",
+                          "name": "val2Icon",
+                          "width": 48,
+                          "height": 48,
+                          "fill": "#FFFFFF26",
+                          "cornerRadius": 14,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "FflTs",
+                              "name": "val2Glyph",
+                              "width": 24,
+                              "height": 24,
+                              "iconFontName": "trending-up",
+                              "iconFontFamily": "lucide",
+                              "fill": "#FFFFFF"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "tGdO7",
+                          "name": "val2Title",
+                          "fill": "#FFFFFF",
+                          "content": "Больше заявок",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "b3r8J",
+                          "name": "val2Text",
+                          "fill": "#FFFFFFB3",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Подача становится понятнее, а клиенту проще дойти до следующего шага.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "OeWYU",
+                      "name": "val3",
+                      "width": "fill_container",
+                      "fill": "#FFFFFFEB",
+                      "cornerRadius": 20,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#2C4CA00D",
+                        "offset": {
+                          "x": 0,
+                          "y": 12
+                        },
+                        "blur": 28
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "zD3v8",
+                          "name": "val3Icon",
+                          "width": 48,
+                          "height": 48,
+                          "fill": "#EEF4FF",
+                          "cornerRadius": 14,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "WrKjv",
+                              "name": "val3Glyph",
+                              "width": 24,
+                              "height": 24,
+                              "iconFontName": "timer",
+                              "iconFontFamily": "lucide",
+                              "fill": "#356BFF"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "TL6AF",
+                          "name": "val3Title",
+                          "fill": "#18233B",
+                          "content": "Быстрее процессы",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "K6bQQ",
+                          "name": "val3Text",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Сценарии и автоматизация убирают лишние задержки и ручной контроль.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "TZytC",
+              "name": "Tasks Section",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 48,
+              "padding": [
+                72,
+                80
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "j9KLe",
+                  "name": "tasksHeader",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "LwmQy",
+                      "name": "tasksEyebrow",
+                      "fill": "#356BFF",
+                      "content": "НАЧНИТЕ С ВАШЕЙ СИТУАЦИИ",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.12
+                    },
+                    {
+                      "type": "text",
+                      "id": "UhsCJ",
+                      "name": "tasksTitle",
+                      "fill": "#18233B",
+                      "content": "Что вам нужно решить?",
+                      "lineHeight": 1.05,
+                      "fontFamily": "Inter",
+                      "fontSize": 40,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "B2YR5",
+                      "name": "tasksSub",
+                      "fill": "#66748F",
+                      "textGrowth": "fixed-width",
+                      "width": 640,
+                      "content": "Большинству клиентов не нужен «набор технологий». Нужен понятный способ решить конкретную задачу.",
+                      "lineHeight": 1.7,
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "AIj6w",
+                  "name": "Tasks Grid",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "J4rhE",
+                      "name": "task1",
+                      "width": "fill_container",
+                      "fill": "#FFFFFFEB",
+                      "cornerRadius": 20,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#2C4CA00D",
+                        "offset": {
+                          "x": 0,
+                          "y": 12
+                        },
+                        "blur": 28
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NXL9L",
+                          "name": "task1Title",
+                          "fill": "#18233B",
+                          "content": "Больше заявок и обращений",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "bCftK",
+                          "name": "task1Text",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Нужна понятная точка входа, которая объясняет предложение, вызывает доверие и приводит к заявке.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "YHVJK",
+                          "name": "task1Meta",
+                          "fill": "#356BFF",
+                          "content": "Обычно подходит: сайт, бот, автоматизация",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Mm0tC",
+                      "name": "task2",
+                      "width": "fill_container",
+                      "fill": "#FFFFFFEB",
+                      "cornerRadius": 20,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#2C4CA00D",
+                        "offset": {
+                          "x": 0,
+                          "y": 12
+                        },
+                        "blur": 28
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "JIv4q",
+                          "name": "task2Title",
+                          "fill": "#18233B",
+                          "content": "Понятно показать услуги",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "edI0H",
+                          "name": "task2Text",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Важно объяснить, что вы предлагаете, кому это подходит и почему с вами стоит работать.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "fzjHM",
+                          "name": "task2Meta",
+                          "fill": "#356BFF",
+                          "content": "Обычно подходит: сайт, приложение",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "kojzv",
+                      "name": "task3",
+                      "width": "fill_container",
+                      "fill": "#FFFFFFEB",
+                      "cornerRadius": 20,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#2C4CA00D",
+                        "offset": {
+                          "x": 0,
+                          "y": 12
+                        },
+                        "blur": 28
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "pRaKv",
+                          "name": "task3Title",
+                          "fill": "#18233B",
+                          "content": "Автоматизировать общение",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Qls8x",
+                          "name": "task3Text",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Нужно меньше вручную отвечать на одно и то же и быстрее переводить человека к следующему шагу.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "7nNSC",
+                          "name": "task3Meta",
+                          "fill": "#356BFF",
+                          "content": "Обычно подходит: бот, AI-агент, автоматизация",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mYlKm",
+              "name": "Process Section",
+              "width": "fill_container",
+              "fill": "#EDF2FF",
+              "layout": "vertical",
+              "gap": 48,
+              "padding": [
+                72,
+                80
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "TRrPw",
+                  "name": "processHeader",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "uXkjF",
+                      "name": "processEyebrow",
+                      "fill": "#356BFF",
+                      "content": "КАК МЫ РАБОТАЕМ",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.12
+                    },
+                    {
+                      "type": "text",
+                      "id": "eWYSN",
+                      "name": "processTitle",
+                      "fill": "#18233B",
+                      "content": "Понятный процесс от первого разговора до результата",
+                      "lineHeight": 1.1,
+                      "fontFamily": "Inter",
+                      "fontSize": 36,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pdG3P",
+                  "name": "processSteps",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kWsLL",
+                      "name": "step1",
+                      "width": "fill_container",
+                      "fill": "#FFFFFFEB",
+                      "cornerRadius": 20,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#2C4CA00D",
+                        "offset": {
+                          "x": 0,
+                          "y": 12
+                        },
+                        "blur": 28
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "1aH5Z",
+                          "name": "step1Num",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#356BFF",
+                          "cornerRadius": 999,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "nNmRv",
+                              "name": "step1NumTxt",
+                              "fill": "#FFFFFF",
+                              "content": "1",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "800"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "WITsm",
+                          "name": "step1Title",
+                          "fill": "#18233B",
+                          "content": "Разбираем задачу",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "zZlrn",
+                          "name": "step1Text",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Говорим о бизнесе, ситуации и цели. Без техджаргона.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "4SyD5",
+                      "name": "step2",
+                      "width": "fill_container",
+                      "fill": "#FFFFFFEB",
+                      "cornerRadius": 20,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#2C4CA00D",
+                        "offset": {
+                          "x": 0,
+                          "y": 12
+                        },
+                        "blur": 28
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "lCUre",
+                          "name": "step2Num",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#356BFF",
+                          "cornerRadius": 999,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "wDWr6",
+                              "name": "step2NumTxt",
+                              "fill": "#FFFFFF",
+                              "content": "2",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "800"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "nJOvB",
+                          "name": "step2Title",
+                          "fill": "#18233B",
+                          "content": "Выбираем формат",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "OPgig",
+                          "name": "step2Text",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Объясняю, что подходит именно вашей ситуации и почему.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "C88vP",
+                      "name": "step3",
+                      "width": "fill_container",
+                      "fill": "#FFFFFFEB",
+                      "cornerRadius": 20,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#2C4CA00D",
+                        "offset": {
+                          "x": 0,
+                          "y": 12
+                        },
+                        "blur": 28
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "er9dV",
+                          "name": "step3Num",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#356BFF",
+                          "cornerRadius": 999,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "lmhRF",
+                              "name": "step3NumTxt",
+                              "fill": "#FFFFFF",
+                              "content": "3",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "800"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "dvigj",
+                          "name": "step3Title",
+                          "fill": "#18233B",
+                          "content": "Собираем решение",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "W4Py5",
+                          "name": "step3Text",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Делаю прозрачно: понятные этапы, ясный старт, спокойная коммуникация.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "JqQpx",
+                      "name": "step4",
+                      "width": "fill_container",
+                      "fill": "#FFFFFFEB",
+                      "cornerRadius": 20,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#2C4CA00D",
+                        "offset": {
+                          "x": 0,
+                          "y": 12
+                        },
+                        "blur": 28
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "810jf",
+                          "name": "step4Num",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#356BFF",
+                          "cornerRadius": 999,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "qmz4s",
+                              "name": "step4NumTxt",
+                              "fill": "#FFFFFF",
+                              "content": "4",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "800"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "1tU8Z",
+                          "name": "step4Title",
+                          "fill": "#18233B",
+                          "content": "Запускаем и сопровождаем",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "C13fk",
+                          "name": "step4Text",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "После запуска остаюсь на связи, помогаю разобраться и доработать.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "2NfUO",
+              "name": "CTA Section",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 28,
+              "padding": [
+                72,
+                80
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "RKzIr",
+                  "name": "ctaBlock",
+                  "width": "fill_container",
+                  "fill": "#356BFF",
+                  "cornerRadius": 24,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#356BFF33",
+                    "offset": {
+                      "x": 0,
+                      "y": 24
+                    },
+                    "blur": 60
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": [
+                    56,
+                    64
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZfUHX",
+                      "name": "ctaTitle",
+                      "fill": "#FFFFFF",
+                      "textGrowth": "fixed-width",
+                      "width": 680,
+                      "content": "Готовы разобраться, что подходит именно вам?",
+                      "lineHeight": 1.1,
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 36,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vaLfq",
+                      "name": "ctaSub",
+                      "fill": "#FFFFFFB3",
+                      "textGrowth": "fixed-width",
+                      "width": 560,
+                      "content": "Начните с бесплатной диагностики — это 20 минут, которые помогут выбрать правильный формат и не потратить деньги впустую.",
+                      "lineHeight": 1.65,
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "s14Lz",
+                      "name": "ctaActions",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "j5x3E",
+                          "name": "ctaBtn1",
+                          "height": 52,
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 999,
+                          "padding": [
+                            0,
+                            28
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "OMvfq",
+                              "name": "ctaBtn1Txt",
+                              "fill": "#356BFF",
+                              "content": "Пройти диагностику",
+                              "fontFamily": "Inter",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "FKEkK",
+                          "name": "ctaBtn2",
+                          "height": 52,
+                          "fill": "#FFFFFF26",
+                          "cornerRadius": 999,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#FFFFFF40"
+                          },
+                          "padding": [
+                            0,
+                            28
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "iAFm3",
+                              "name": "ctaBtn2Txt",
+                              "fill": "#FFFFFF",
+                              "content": "Обсудить задачу",
+                              "fontFamily": "Inter",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Jdjdf",
+              "name": "Footer",
+              "width": "fill_container",
+              "fill": "#18233B",
+              "padding": [
+                28,
+                80
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Wanoa",
+                  "name": "footerBrand",
+                  "fill": "#FFFFFF",
+                  "content": "Almira Sultanova",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "lstN9",
+                  "name": "footerCopy",
+                  "fill": "#FFFFFF66",
+                  "content": "© 2025 · AI-разработчик и digital-архитектор",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "fTcqF",
+          "x": 1520,
+          "y": 0,
+          "name": "Index V2 — Premium",
+          "width": 1440,
+          "fill": "#0A0F1E",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "9Ibp5",
+              "name": "Nav",
+              "width": "fill_container",
+              "height": 72,
+              "fill": "#FFFFFF08",
+              "padding": [
+                0,
+                80
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "k36zf",
+                  "name": "navBrand2",
+                  "fill": "#FFFFFF",
+                  "content": "Almira Sultanova",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "800",
+                  "letterSpacing": 0.01
+                },
+                {
+                  "type": "frame",
+                  "id": "Ps0Ng",
+                  "name": "navLinks2",
+                  "gap": 28,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "izmFF",
+                      "name": "nl1",
+                      "fill": "#FFFFFF80",
+                      "content": "Кейсы",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "3mkHi",
+                      "name": "nl2",
+                      "fill": "#FFFFFF80",
+                      "content": "Услуги",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "uKsjS",
+                      "name": "nl3",
+                      "fill": "#FFFFFF80",
+                      "content": "Процесс",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "jTHRa",
+                      "name": "nl4",
+                      "fill": "#FFFFFF80",
+                      "content": "FAQ",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Jx4eB",
+                  "name": "navCta2",
+                  "height": 40,
+                  "fill": "#356BFF",
+                  "cornerRadius": 999,
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Ou5y0",
+                      "name": "navCtaTxt2",
+                      "fill": "#FFFFFF",
+                      "content": "Обсудить проект",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "KgdAF",
+              "name": "Hero",
+              "width": "fill_container",
+              "height": 680,
+              "fill": "#0A0F1E",
+              "gap": 60,
+              "padding": [
+                0,
+                80
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "W5LVL",
+                  "name": "Hero Left",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 28,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "LEMnS",
+                      "name": "heroBadge",
+                      "fill": "#356BFF18",
+                      "cornerRadius": 999,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#356BFF40"
+                      },
+                      "gap": 8,
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "mGfXo",
+                          "name": "heroBadgeDot",
+                          "fill": "#356BFF",
+                          "width": 6,
+                          "height": 6
+                        },
+                        {
+                          "type": "text",
+                          "id": "L2Wi6",
+                          "name": "heroBadgeTxt",
+                          "fill": "#356BFF",
+                          "content": "AI-разработчик · digital-архитектор",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "wVj0p",
+                      "name": "heroH1",
+                      "fill": "#FFFFFF",
+                      "textGrowth": "fixed-width",
+                      "width": 620,
+                      "content": "Almira\nSultanova",
+                      "lineHeight": 0.95,
+                      "fontFamily": "Inter",
+                      "fontSize": 86,
+                      "fontWeight": "900",
+                      "letterSpacing": -0.03
+                    },
+                    {
+                      "type": "text",
+                      "id": "a7X9j",
+                      "name": "heroDesc",
+                      "fill": "#FFFFFF99",
+                      "textGrowth": "fixed-width",
+                      "width": 520,
+                      "content": "Помогаю выбрать правильный digital-инструмент под задачу и собрать решение, которое действительно работает. Без лишней сложности.",
+                      "lineHeight": 1.7,
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "29DRs",
+                      "name": "heroActRow",
+                      "gap": 14,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "uFjPL",
+                          "name": "hBtn1",
+                          "height": 54,
+                          "fill": "#356BFF",
+                          "cornerRadius": 999,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "#356BFF50",
+                            "offset": {
+                              "x": 0,
+                              "y": 14
+                            },
+                            "blur": 32
+                          },
+                          "padding": [
+                            0,
+                            28
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "wZa76",
+                              "name": "hBtn1Txt",
+                              "fill": "#FFFFFF",
+                              "content": "Пройти диагностику",
+                              "fontFamily": "Inter",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "4DN1Z",
+                          "name": "hBtn2",
+                          "height": 54,
+                          "fill": "#FFFFFF0D",
+                          "cornerRadius": 999,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#FFFFFF20"
+                          },
+                          "padding": [
+                            0,
+                            28
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "wBKmf",
+                              "name": "hBtn2Txt",
+                              "fill": "#FFFFFF",
+                              "content": "Посмотреть кейсы",
+                              "fontFamily": "Inter",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "5dy6P",
+                  "name": "Hero Right",
+                  "clip": true,
+                  "width": 460,
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1776369745922.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 24,
+                  "layout": "vertical"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "4SjQ9",
+              "layoutPosition": "absolute",
+              "x": 1220,
+              "y": 530,
+              "name": "Float Card 1",
+              "width": 220,
+              "fill": "#FFFFFF0F",
+              "cornerRadius": 16,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#FFFFFF15"
+              },
+              "effect": {
+                "type": "background_blur",
+                "radius": 12
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DhRCW",
+                  "name": "floatCard1Label",
+                  "fill": "#FFFFFF60",
+                  "content": "Результат",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "600",
+                  "letterSpacing": 0.08
+                },
+                {
+                  "type": "text",
+                  "id": "9m0Np",
+                  "name": "floatCard1Val",
+                  "fill": "#FFFFFF",
+                  "content": "Меньше хаоса,\nбольше заявок",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Ui42C",
+              "layoutPosition": "absolute",
+              "x": 1060,
+              "y": 155,
+              "name": "Float Card 2",
+              "fill": "#356BFF",
+              "cornerRadius": 14,
+              "gap": 10,
+              "padding": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "wP69W",
+                  "name": "floatCard2Icon",
+                  "width": 18,
+                  "height": 18,
+                  "iconFontName": "circle-check",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FFFFFF"
+                },
+                {
+                  "type": "text",
+                  "id": "HxT03",
+                  "name": "floatCard2Txt",
+                  "fill": "#FFFFFF",
+                  "content": "3 кейса · сайты, боты, AI",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ff85v",
+              "name": "Formats Row",
+              "width": "fill_container",
+              "fill": "#F8F9FF",
+              "gap": 16,
+              "padding": [
+                48,
+                80
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "F7pzp",
+                  "name": "ch1",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#1C274014",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 24
+                  },
+                  "gap": 16,
+                  "padding": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "wP8YV",
+                      "name": "ch1Ico",
+                      "width": 40,
+                      "height": 40,
+                      "fill": "#EEF4FF",
+                      "cornerRadius": 10,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "sVJVh",
+                          "name": "ch1IcoG",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "bot",
+                          "iconFontFamily": "lucide",
+                          "fill": "#356BFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ohJDb",
+                      "name": "ch1Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "9d2Df",
+                          "name": "ch1T",
+                          "fill": "#18233B",
+                          "content": "Telegram-боты",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "yboZ6",
+                          "name": "ch1S",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Воронки, запись, сопровождение",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Av8dn",
+                  "name": "ch2",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#1C274014",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 24
+                  },
+                  "gap": 16,
+                  "padding": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "csSIS",
+                      "name": "ch2Ico",
+                      "width": 40,
+                      "height": 40,
+                      "fill": "#EEF4FF",
+                      "cornerRadius": 10,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "BYVc3",
+                          "name": "ch2IcoG",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "globe",
+                          "iconFontFamily": "lucide",
+                          "fill": "#356BFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "oHFbD",
+                      "name": "ch2Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "5KGcl",
+                          "name": "ch2T",
+                          "fill": "#18233B",
+                          "content": "Сайты и лендинги",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "k3xKp",
+                          "name": "ch2S",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Упаковка услуг, которая ведёт к заявке",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qICBM",
+                  "name": "ch3",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#1C274014",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 24
+                  },
+                  "gap": 16,
+                  "padding": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "UNUvW",
+                      "name": "ch3Ico",
+                      "width": 40,
+                      "height": 40,
+                      "fill": "#EEF4FF",
+                      "cornerRadius": 10,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "yancH",
+                          "name": "ch3IcoG",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "cpu",
+                          "iconFontFamily": "lucide",
+                          "fill": "#356BFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xlUNm",
+                      "name": "ch3Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "A3Hxl",
+                          "name": "ch3T",
+                          "fill": "#18233B",
+                          "content": "AI и автоматизация",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "cwn8W",
+                          "name": "ch3S",
+                          "fill": "#66748F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Умные сценарии для роста бизнеса",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "kSKm8",
+              "name": "Cases Section",
+              "width": "fill_container",
+              "fill": "#F8F9FF",
+              "layout": "vertical",
+              "gap": 48,
+              "padding": [
+                72,
+                80
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "EiGGZ",
+                  "name": "casesHeader",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "8XyFg",
+                      "name": "casesTitle",
+                      "fill": "#0A0F1E",
+                      "content": "Кейсы",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "900",
+                      "letterSpacing": -0.02
+                    },
+                    {
+                      "type": "frame",
+                      "id": "R9cFP",
+                      "name": "casesLink",
+                      "height": 40,
+                      "fill": "#0A0F1E0A",
+                      "cornerRadius": 999,
+                      "gap": 6,
+                      "padding": [
+                        0,
+                        20
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Mhm4G",
+                          "name": "casesLinkTxt",
+                          "fill": "#18233B",
+                          "content": "Все проекты",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "I5was",
+                          "name": "casesLinkIcon",
+                          "width": 16,
+                          "height": 16,
+                          "iconFontName": "arrow-right",
+                          "iconFontFamily": "lucide",
+                          "fill": "#18233B"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KfKNb",
+                  "name": "Cases Grid",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "YZDwX",
+                      "name": "case1",
+                      "clip": true,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 20,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#1C274014",
+                        "offset": {
+                          "x": 0,
+                          "y": 12
+                        },
+                        "blur": 32
+                      },
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "RoIDe",
+                          "name": "case1Img",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "markuswinkler",
+                            "link": "https://unsplash.com/@markuswinkler",
+                            "author": "Markus Winkler"
+                          },
+                          "width": "fill_container",
+                          "height": 240,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1740477959010-c2e99bf4a5ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYzNjk3NTh8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "jRauy",
+                          "name": "case1Body",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 10,
+                          "padding": 24,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "s1MWT",
+                              "name": "case1Tag",
+                              "fill": "#EEF4FF",
+                              "cornerRadius": 999,
+                              "padding": [
+                                5,
+                                12
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "TS0UY",
+                                  "name": "case1TagTxt",
+                                  "fill": "#356BFF",
+                                  "content": "Сайт + бот",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "m5yhv",
+                              "name": "case1Title",
+                              "fill": "#18233B",
+                              "content": "Тело помнит",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "800"
+                            },
+                            {
+                              "type": "text",
+                              "id": "r5kHD",
+                              "name": "case1Desc",
+                              "fill": "#66748F",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Психолог-соматолог: сайт + Telegram-бот для автоматической записи клиентов",
+                              "lineHeight": 1.5,
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "GScuj",
+                      "name": "case2",
+                      "clip": true,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 20,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#1C274014",
+                        "offset": {
+                          "x": 0,
+                          "y": 12
+                        },
+                        "blur": 32
+                      },
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "72yvF",
+                          "name": "case2Img",
+                          "width": "fill_container",
+                          "height": 240,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/generated-1776369777072.png",
+                            "mode": "fill"
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "KhDtM",
+                          "name": "case2Body",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 10,
+                          "padding": 24,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "6Y56H",
+                              "name": "case2Tag",
+                              "fill": "#EEF4FF",
+                              "cornerRadius": 999,
+                              "padding": [
+                                5,
+                                12
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "anYR3",
+                                  "name": "case2TagTxt",
+                                  "fill": "#356BFF",
+                                  "content": "AI-агент",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "rs22o",
+                              "name": "case2Title",
+                              "fill": "#18233B",
+                              "content": "Скоро здесь",
+                              "fontFamily": "Inter",
+                              "fontSize": 20,
+                              "fontWeight": "800"
+                            },
+                            {
+                              "type": "text",
+                              "id": "vH6Gb",
+                              "name": "case2Desc",
+                              "fill": "#66748F",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Следующий кейс в работе. Скоро опубликую.",
+                              "lineHeight": 1.5,
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "aoJ0q",
+              "name": "CTA Dark",
+              "width": "fill_container",
+              "fill": "#0A0F1E",
+              "layout": "vertical",
+              "gap": 32,
+              "padding": 80,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "30qFB",
+                  "name": "ctaEye",
+                  "fill": "#356BFF",
+                  "content": "ГОТОВЫ НАЧАТЬ?",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "700",
+                  "letterSpacing": 0.14
+                },
+                {
+                  "type": "text",
+                  "id": "HsLAy",
+                  "name": "ctaH",
+                  "fill": "#FFFFFF",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "Разберёмся, что подходит\nименно вашему бизнесу",
+                  "lineHeight": 1,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 52,
+                  "fontWeight": "900",
+                  "letterSpacing": -0.02
+                },
+                {
+                  "type": "text",
+                  "id": "EVDGb",
+                  "name": "ctaSub2",
+                  "fill": "#FFFFFF80",
+                  "textGrowth": "fixed-width",
+                  "width": 520,
+                  "content": "Бесплатная диагностика — 20 минут. Поймёте, какой формат решает вашу задачу, и почему именно он.",
+                  "lineHeight": 1.65,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "oPerx",
+                  "name": "ctaRow2",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "9TZES",
+                      "name": "cBtn1",
+                      "height": 56,
+                      "fill": "#356BFF",
+                      "cornerRadius": 999,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#356BFF55",
+                        "offset": {
+                          "x": 0,
+                          "y": 16
+                        },
+                        "blur": 40
+                      },
+                      "padding": [
+                        0,
+                        32
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ZMClr",
+                          "name": "cBtn1Txt",
+                          "fill": "#FFFFFF",
+                          "content": "Пройти диагностику",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "cJHWf",
+                      "name": "cBtn2",
+                      "height": 56,
+                      "fill": "#FFFFFF0D",
+                      "cornerRadius": 999,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#FFFFFF20"
+                      },
+                      "padding": [
+                        0,
+                        32
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "98VF6",
+                          "name": "cBtn2Txt",
+                          "fill": "#FFFFFF",
+                          "content": "Написать напрямую",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wLXcY",
+              "name": "Footer",
+              "width": "fill_container",
+              "fill": "#060A12",
+              "padding": [
+                28,
+                80
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "kcrdK",
+                  "name": "footer2Brand",
+                  "fill": "#FFFFFF",
+                  "content": "Almira Sultanova",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "JSpFJ",
+                  "name": "footer2Copy",
+                  "fill": "#FFFFFF40",
+                  "content": "© 2025 · AI-разработчик и digital-архитектор",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

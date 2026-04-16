@@ -367,6 +367,20 @@
       gap: 20px;
     }
 
+    .chip-grid,
+    .value-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .chip-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .value-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .task-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -391,6 +405,60 @@
     .case-card,
     .faq-item {
       padding: 26px;
+    }
+
+    .chip-card,
+    .value-card {
+      display: grid;
+      grid-template-columns: 64px minmax(0, 1fr);
+      gap: 16px;
+      align-items: center;
+      padding: 20px 22px;
+      border: 1px solid rgba(196, 154, 138, 0.13);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .chip-card__icon,
+    .value-card__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at top left, rgba(142, 176, 255, 0.34), transparent 48%),
+        linear-gradient(180deg, rgba(243, 248, 255, 0.96), rgba(231, 239, 255, 0.92));
+      box-shadow:
+        inset 0 0 0 1px rgba(196, 154, 138, 0.1),
+        0 10px 20px rgba(100, 58, 44, 0.06);
+      overflow: hidden;
+    }
+
+    .chip-card__icon img,
+    .value-card__icon img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+    }
+
+    .chip-card__title,
+    .value-card__title {
+      margin: 0 0 6px;
+      color: var(--heading);
+      font-size: 1.06rem;
+      line-height: 1.28;
+      letter-spacing: -0.02em;
+    }
+
+    .chip-card__text,
+    .value-card__text {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.55;
     }
 
     .task-card,
@@ -540,6 +608,8 @@
     }
 
     @media (max-width: 1100px) {
+      .chip-grid,
+      .value-grid,
       .solution-grid,
       .starter-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -576,6 +646,8 @@
       }
 
       .task-grid,
+      .chip-grid,
+      .value-grid,
       .solution-grid,
       .starter-grid {
         grid-template-columns: 1fr;
@@ -653,23 +725,23 @@
       }
     }
 
-    /* Design refresh based on reference */
+    /* Design refresh — warm & premium */
     :root {
-      --bg: #f4f7ff;
-      --bg-soft: #ebf1ff;
-      --surface: rgba(255, 255, 255, 0.92);
-      --surface-strong: #ffffff;
-      --surface-accent: #eef4ff;
-      --text: #1c2740;
-      --text-muted: #66748f;
-      --heading: #18233b;
-      --line: rgba(53, 107, 255, 0.12);
-      --line-strong: rgba(53, 107, 255, 0.22);
-      --accent: #356bff;
-      --accent-strong: #234cc4;
-      --accent-soft: rgba(53, 107, 255, 0.1);
-      --shadow: 0 22px 54px rgba(44, 76, 160, 0.1);
-      --shadow-soft: 0 12px 28px rgba(44, 76, 160, 0.08);
+      --bg: #FAF7F5;
+      --bg-soft: #F3EDE9;
+      --surface: rgba(255, 252, 250, 0.92);
+      --surface-strong: #FFFEFB;
+      --surface-accent: #F5EDE8;
+      --text: #1E1916;
+      --text-muted: #7A6360;
+      --heading: #1A1210;
+      --line: rgba(196, 154, 138, 0.15);
+      --line-strong: rgba(196, 154, 138, 0.28);
+      --accent: #C49A8A;
+      --accent-strong: #A67B6A;
+      --accent-soft: rgba(196, 154, 138, 0.13);
+      --shadow: 0 22px 54px rgba(100, 58, 44, 0.09);
+      --shadow-soft: 0 12px 28px rgba(100, 58, 44, 0.06);
       --radius-xl: 28px;
       --radius-lg: 20px;
       --radius-md: 16px;
@@ -679,13 +751,28 @@
 
     body {
       background:
-        radial-gradient(circle at top center, rgba(123, 160, 255, 0.18), transparent 34%),
-        linear-gradient(180deg, #fbfcff 0%, #f4f7ff 44%, #edf2ff 100%);
+        radial-gradient(ellipse at 80% 0%, rgba(218, 185, 165, 0.22) 0%, transparent 50%),
+        radial-gradient(ellipse at 10% 60%, rgba(196, 154, 138, 0.1) 0%, transparent 45%),
+        radial-gradient(ellipse at 60% 100%, rgba(230, 200, 185, 0.14) 0%, transparent 40%),
+        linear-gradient(180deg, #FFFEFB 0%, #FAF7F5 35%, #F0E8E2 70%, #EDE4DB 100%);
     }
 
     .site-header {
-      background: rgba(251, 252, 255, 0.9);
-      border-bottom-color: rgba(53, 107, 255, 0.08);
+      background: rgba(26, 18, 16, 0.94);
+      border-bottom-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .site-brand {
+      color: #fff;
+    }
+
+    .site-nav__link,
+    .site-footer__link {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .site-nav__link:hover {
+      color: #fff;
     }
 
     .site-brand {
@@ -697,11 +784,11 @@
       border-color: transparent;
       background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
       color: #fff;
-      box-shadow: 0 14px 30px rgba(53, 107, 255, 0.22);
+      box-shadow: 0 14px 30px rgba(196, 154, 138, 0.32);
     }
 
     .site-header__action:hover {
-      background: linear-gradient(135deg, #4277ff 0%, #2b55d2 100%);
+      background: linear-gradient(135deg, #D0A896 0%, #B08070 100%);
       color: #fff;
     }
 
@@ -710,23 +797,33 @@
     }
 
     .hero {
-      padding-top: 48px;
+      padding-top: 0;
+      background:
+        radial-gradient(ellipse at 75% 40%, rgba(196, 154, 138, 0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 20% 80%, rgba(160, 100, 75, 0.1) 0%, transparent 45%),
+        radial-gradient(ellipse at 90% 90%, rgba(218, 170, 140, 0.08) 0%, transparent 35%),
+        linear-gradient(160deg, #1A1210 0%, #221612 50%, #1E130F 100%);
     }
 
     .hero__layout {
       position: relative;
-      padding: 34px;
-      border: 1px solid rgba(53, 107, 255, 0.1);
-      border-radius: var(--radius-xl);
-      background:
-        radial-gradient(circle at top right, rgba(123, 160, 255, 0.18), transparent 30%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 248, 255, 0.92));
-      box-shadow: 0 34px 88px rgba(44, 76, 160, 0.12);
-      overflow: hidden;
+      padding: 72px 0 80px;
+      border: none;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      overflow: visible;
     }
 
     .hero__content,
-    .hero__aside,
+    .hero__aside {
+      border: none;
+      background: transparent;
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+
+    /* Секции с лёгким тёплым градиентом */
     .task-card,
     .solution-card,
     .starter-card,
@@ -734,32 +831,50 @@
     .case-card,
     .faq-item,
     .process-item,
+    .chip-card,
+    .value-card {
+      background: linear-gradient(145deg, rgba(255, 252, 250, 0.95) 0%, rgba(245, 237, 232, 0.88) 100%);
+    }
+
     .diagnostics-banner,
     .final-cta {
-      border-color: rgba(53, 107, 255, 0.1);
-      background: rgba(255, 255, 255, 0.88);
-      box-shadow: var(--shadow-soft);
-      backdrop-filter: blur(12px);
+      background:
+        radial-gradient(ellipse at top right, rgba(218, 185, 170, 0.18) 0%, transparent 50%),
+        linear-gradient(160deg, rgba(255, 252, 250, 0.98) 0%, rgba(245, 237, 232, 0.95) 100%);
     }
 
     .hero__content {
       padding-right: 12px;
-      background: transparent;
-      box-shadow: none;
-      border: none;
+    }
+
+    .hero__content .section__eyebrow {
+      color: var(--accent);
+      opacity: 0.9;
     }
 
     .hero__content .section__title {
-      font-size: clamp(2.3rem, 5vw, 4.4rem);
+      color: #FFFFFF;
+      font-size: clamp(2.4rem, 5.5vw, 4.8rem);
       line-height: 1.02;
       letter-spacing: -0.05em;
       max-width: 740px;
+    }
+
+    .hero__content .section__subtitle {
+      color: rgba(255, 255, 255, 0.58);
     }
 
     .hero__content .section__title strong,
     .hero__content .section__title span,
     .hero__content .section__title-accent {
       color: var(--accent);
+    }
+
+    .hero__title-accent {
+      background: linear-gradient(135deg, #E8C4B0 0%, #C49A8A 50%, #D4A890 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .hero__actions {
@@ -774,13 +889,20 @@
 
     .button--primary {
       background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
-      box-shadow: 0 16px 32px rgba(53, 107, 255, 0.25);
+      box-shadow: 0 16px 32px rgba(196, 154, 138, 0.35);
     }
 
     .button--secondary {
-      border-color: rgba(53, 107, 255, 0.14);
-      background: rgba(255, 255, 255, 0.84);
-      box-shadow: 0 10px 22px rgba(44, 76, 160, 0.08);
+      border-color: rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      box-shadow: none;
+    }
+
+    .button--secondary:hover {
+      border-color: rgba(255, 255, 255, 0.32);
+      background: rgba(255, 255, 255, 0.14);
+      color: #fff;
     }
 
     .hero__points {
@@ -789,11 +911,25 @@
     }
 
     .hero__point {
-      color: var(--text-muted);
-      font-size: 0.98rem;
+      color: rgba(255, 255, 255, 0.52);
+      font-size: 0.96rem;
+      padding-left: 24px;
     }
 
-    .hero__point::before,
+    .hero__point::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: auto;
+      height: auto;
+      border-radius: 0;
+      background: none;
+      color: var(--accent);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
     .diagnostics-banner__item::before,
     .trust-card__item::before {
       background: var(--accent);
@@ -801,12 +937,37 @@
 
     .hero__aside {
       position: relative;
-      min-height: 500px;
-      border-radius: 26px;
+      min-height: 520px;
+      border-radius: 20px;
       background:
-        radial-gradient(circle at 70% 26%, rgba(123, 160, 255, 0.24), transparent 22%),
-        linear-gradient(180deg, #f6f9ff 0%, #eef4ff 100%);
+        radial-gradient(ellipse at 60% 30%, rgba(196, 154, 138, 0.2) 0%, transparent 60%),
+        linear-gradient(160deg, #2E201A 0%, #3D2A22 50%, #2A1C16 100%);
       overflow: hidden;
+    }
+
+    .hero__visual {
+      position: relative;
+      height: 100%;
+      min-height: 500px;
+      padding: 18px;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .hero__visual-image {
+      width: 100%;
+      height: 100%;
+      min-height: 464px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 24px;
+      box-shadow: 0 28px 64px rgba(100, 58, 44, 0.1);
+      background: linear-gradient(180deg, #FAF7F5 0%, #EDE4DE 100%);
+    }
+
+    .hero__visual .hero-showcase__phone,
+    .hero__visual .hero-float {
+      display: none;
     }
 
     .hero-showcase {
@@ -823,14 +984,14 @@
       height: 224px;
       padding: 14px;
       border-radius: 24px;
-      background: linear-gradient(180deg, #fbfdff 0%, #dfe9ff 100%);
-      box-shadow: 0 24px 56px rgba(44, 76, 160, 0.18);
+      background: linear-gradient(180deg, #FFFEFB 0%, #EDE4DE 100%);
+      box-shadow: 0 24px 56px rgba(100, 58, 44, 0.13);
     }
 
     .hero-showcase__screen {
       height: 100%;
       border-radius: 18px;
-      background: linear-gradient(160deg, #1d2742 0%, #33416c 100%);
+      background: linear-gradient(160deg, #1A1210 0%, #2E2018 100%);
       overflow: hidden;
       position: relative;
     }
@@ -862,8 +1023,8 @@
     .hero-showcase__chart span {
       flex: 1;
       border-radius: 16px 16px 6px 6px;
-      background: linear-gradient(180deg, #8cb0ff 0%, var(--accent) 100%);
-      box-shadow: 0 10px 18px rgba(53, 107, 255, 0.18);
+      background: linear-gradient(180deg, #D4B0A0 0%, var(--accent) 100%);
+      box-shadow: 0 10px 18px rgba(196, 154, 138, 0.22);
     }
 
     .hero-showcase__chart span:nth-child(1) { height: 50px; opacity: 0.72; }
@@ -900,8 +1061,8 @@
       padding: 16px 12px 14px;
       border-radius: 30px;
       border: 8px solid #fff;
-      background: linear-gradient(160deg, #202846 0%, #2c3657 100%);
-      box-shadow: 0 26px 54px rgba(24, 42, 98, 0.22);
+      background: linear-gradient(160deg, #2A1E1A 0%, #3D2D27 100%);
+      box-shadow: 0 26px 54px rgba(80, 40, 30, 0.2);
       transform: rotate(8deg);
       z-index: 3;
     }
@@ -927,15 +1088,15 @@
     }
 
     .hero-showcase__bubble--strong {
-      background: linear-gradient(135deg, #8cb0ff 0%, var(--accent) 100%);
-      box-shadow: 0 10px 18px rgba(53, 107, 255, 0.18);
+      background: linear-gradient(135deg, #D4B0A0 0%, var(--accent) 100%);
+      box-shadow: 0 10px 18px rgba(196, 154, 138, 0.22);
     }
 
     .hero-float,
     .hero-profile {
       position: absolute;
       z-index: 4;
-      border: 1px solid rgba(53, 107, 255, 0.1);
+      border: 1px solid rgba(196, 154, 138, 0.13);
       border-radius: 18px;
       background: rgba(255, 255, 255, 0.94);
       box-shadow: var(--shadow);
@@ -1000,7 +1161,7 @@
       border-radius: 18px;
       object-fit: cover;
       object-position: center top;
-      box-shadow: 0 12px 26px rgba(44, 76, 160, 0.14);
+      box-shadow: 0 12px 26px rgba(100, 58, 44, 0.1);
     }
 
     #tasks .section__header,
@@ -1039,8 +1200,8 @@
       width: 42px;
       height: 42px;
       border-radius: 14px;
-      background: linear-gradient(135deg, rgba(123, 160, 255, 0.22), rgba(53, 107, 255, 0.12));
-      box-shadow: inset 0 0 0 1px rgba(53, 107, 255, 0.08);
+      background: linear-gradient(135deg, rgba(218, 185, 170, 0.22), rgba(53, 107, 255, 0.12));
+      box-shadow: inset 0 0 0 1px rgba(196, 154, 138, 0.1);
     }
 
     .task-card,
@@ -1059,8 +1220,8 @@
       width: 4px;
       height: 28px;
       border-radius: 999px;
-      background: linear-gradient(180deg, var(--accent), #8cb0ff);
-      box-shadow: 0 0 0 6px rgba(53, 107, 255, 0.06);
+      background: linear-gradient(180deg, var(--accent), #D4B0A0);
+      box-shadow: 0 0 0 6px rgba(196, 154, 138, 0.08);
     }
 
     .task-card__title,
@@ -1073,7 +1234,7 @@
     .solution-card:hover,
     .starter-card:hover,
     .case-card:hover {
-      border-color: rgba(53, 107, 255, 0.18);
+      border-color: rgba(196, 154, 138, 0.22);
       box-shadow: var(--shadow);
     }
 
@@ -1081,8 +1242,8 @@
       padding: 30px;
       background:
         radial-gradient(circle at top right, rgba(123, 160, 255, 0.18), transparent 24%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 248, 255, 0.94));
-      box-shadow: 0 26px 64px rgba(44, 76, 160, 0.12);
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 237, 232, 0.94));
+      box-shadow: 0 26px 64px rgba(100, 58, 44, 0.09);
     }
 
     .process-list {
@@ -1109,8 +1270,8 @@
       margin: -2px -2px 18px;
       border-radius: 18px;
       overflow: hidden;
-      background: linear-gradient(160deg, #dfe8ff 0%, #f8fbff 100%);
-      box-shadow: inset 0 0 0 1px rgba(53, 107, 255, 0.08);
+      background: linear-gradient(160deg, #EDE4DE 0%, #FAF7F5 100%);
+      box-shadow: inset 0 0 0 1px rgba(196, 154, 138, 0.1);
     }
 
     .case-card__image {
@@ -1126,7 +1287,7 @@
       position: absolute;
       inset: auto 0 0;
       height: 64px;
-      background: linear-gradient(180deg, transparent, rgba(18, 31, 66, 0.14));
+      background: linear-gradient(180deg, transparent, rgba(80, 40, 30, 0.12));
       pointer-events: none;
     }
 
@@ -1141,7 +1302,7 @@
     }
 
     .case-card__badge-icon {
-      background: linear-gradient(135deg, #7aa1ff 0%, var(--accent) 100%);
+      background: linear-gradient(135deg, #D4B0A0 0%, var(--accent) 100%);
     }
 
     .faq-item {
@@ -1151,19 +1312,19 @@
 
     .final-cta {
       background:
-        radial-gradient(circle at top center, rgba(123, 160, 255, 0.16), transparent 24%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 248, 255, 0.94));
-      box-shadow: 0 26px 64px rgba(44, 76, 160, 0.12);
+        radial-gradient(circle at top center, rgba(218, 185, 170, 0.14), transparent 24%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 237, 232, 0.94));
+      box-shadow: 0 26px 64px rgba(100, 58, 44, 0.09);
     }
 
     .site-footer {
-      border-top-color: rgba(53, 107, 255, 0.08);
+      border-top-color: rgba(196, 154, 138, 0.1);
     }
 
     /* Interaction polish */
     a:focus-visible,
     button:focus-visible {
-      outline: 3px solid rgba(53, 107, 255, 0.22);
+      outline: 3px solid rgba(196, 154, 138, 0.3);
       outline-offset: 3px;
     }
 
@@ -1182,7 +1343,7 @@
       bottom: -3px;
       height: 2px;
       border-radius: 999px;
-      background: linear-gradient(90deg, var(--accent), #8cb0ff);
+      background: linear-gradient(90deg, var(--accent), #D4B0A0);
       opacity: 0;
       transform: scaleX(0.45);
       transform-origin: center;
@@ -1273,7 +1434,7 @@
     .hero-float:hover,
     .hero-profile:hover {
       transform: translateY(-3px);
-      border-color: rgba(53, 107, 255, 0.16);
+      border-color: rgba(196, 154, 138, 0.2);
       box-shadow: var(--shadow);
     }
 
@@ -1351,6 +1512,14 @@
         min-height: 460px;
       }
 
+      .hero__visual {
+        min-height: 460px;
+      }
+
+      .hero__visual-image {
+        min-height: 424px;
+      }
+
       .hero-showcase {
         min-height: 460px;
       }
@@ -1407,6 +1576,16 @@
 
       .hero__aside {
         min-height: 560px;
+      }
+
+      .hero__visual {
+        min-height: 560px;
+        padding: 16px;
+      }
+
+      .hero__visual-image {
+        min-height: 524px;
+        border-radius: 20px;
       }
 
       .hero-showcase {
@@ -1474,7 +1653,7 @@
       .final-cta,
       .hero-float,
       .hero-profile {
-        box-shadow: 0 12px 22px rgba(44, 76, 160, 0.08);
+        box-shadow: 0 12px 22px rgba(100, 58, 44, 0.06);
       }
 
       .chip-card,
@@ -1486,6 +1665,25 @@
       .case-card,
       .faq-item {
         padding: 18px;
+      }
+
+      .chip-card,
+      .value-card {
+        grid-template-columns: 56px minmax(0, 1fr);
+        gap: 14px;
+      }
+
+      .chip-card__icon,
+      .value-card__icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+      }
+
+      .chip-card__icon img,
+      .value-card__icon img {
+        width: 38px;
+        height: 38px;
       }
 
       .hero-float {
@@ -1539,7 +1737,7 @@
         <div class="hero__content">
           <p class="section__eyebrow">Понятный выбор digital-решений</p>
           <h1 class="section__title">
-            Не просто делаю сайты и AI-инструменты, а помогаю понять, что именно нужно вашему бизнесу
+            Не просто делаю сайты и AI-инструменты —<br>помогаю понять, <span class="hero__title-accent">что именно нужно</span> вашему бизнесу
           </h1>
           <p class="section__subtitle">
             Сайт, бот, приложение, AI-агент и автоматизация решают разные задачи.
@@ -1560,27 +1758,12 @@
         </div>
 
         <aside class="hero__aside" aria-label="Визуальное представление решений">
-          <div class="hero-showcase">
-            <div class="hero-showcase__panel hero-showcase__panel--main">
-              <div class="hero-showcase__screen">
-                <div class="hero-showcase__screen-top">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div class="hero-showcase__chart">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div class="hero-showcase__bars">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
-            </div>
+          <div class="hero__visual">
+            <img
+              class="hero__visual-image"
+              src="assets/images/hero-visual-main.svg"
+              alt="Визуальная композиция с интерфейсами сайта, приложения, бота и product-карточками"
+            >
 
             <div class="hero-showcase__phone">
               <div class="hero-showcase__phone-notch"></div>
@@ -1621,7 +1804,9 @@
       <div class="container">
         <div class="chip-grid">
           <article class="chip-card">
-            <div class="chip-card__icon" aria-hidden="true">T</div>
+            <div class="chip-card__icon" aria-hidden="true">
+              <img src="assets/icons/icon-bot.svg" alt="">
+            </div>
             <div>
               <h2 class="chip-card__title">Telegram-боты</h2>
               <p class="chip-card__text">Воронки, запись, ответы и автоматическое сопровождение клиентов.</p>
@@ -1629,7 +1814,9 @@
           </article>
 
           <article class="chip-card">
-            <div class="chip-card__icon" aria-hidden="true">S</div>
+            <div class="chip-card__icon" aria-hidden="true">
+              <img src="assets/icons/icon-site.svg" alt="">
+            </div>
             <div>
               <h2 class="chip-card__title">Сайты и лендинги</h2>
               <p class="chip-card__text">Быстрая и понятная упаковка услуг, которая ведет человека к заявке.</p>
@@ -1637,7 +1824,9 @@
           </article>
 
           <article class="chip-card">
-            <div class="chip-card__icon" aria-hidden="true">AI</div>
+            <div class="chip-card__icon" aria-hidden="true">
+              <img src="assets/icons/icon-ai.svg" alt="">
+            </div>
             <div>
               <h2 class="chip-card__title">AI и автоматизация</h2>
               <p class="chip-card__text">Умные сценарии, которые помогают бизнесу работать быстрее и спокойнее.</p>
@@ -1655,7 +1844,9 @@
 
         <div class="value-grid">
           <article class="value-card">
-            <div class="value-card__icon" aria-hidden="true">-</div>
+            <div class="value-card__icon" aria-hidden="true">
+              <img src="assets/icons/icon-routine.svg" alt="">
+            </div>
             <div>
               <h3 class="value-card__title">Меньше рутины</h3>
               <p class="value-card__text">Повторяющихся действий становится меньше, а работа двигается быстрее.</p>
@@ -1663,7 +1854,9 @@
           </article>
 
           <article class="value-card">
-            <div class="value-card__icon" aria-hidden="true">+</div>
+            <div class="value-card__icon" aria-hidden="true">
+              <img src="assets/icons/icon-leads.svg" alt="">
+            </div>
             <div>
               <h3 class="value-card__title">Больше заявок</h3>
               <p class="value-card__text">Подача становится понятнее, а клиенту проще дойти до следующего шага.</p>
@@ -1671,7 +1864,9 @@
           </article>
 
           <article class="value-card">
-            <div class="value-card__icon" aria-hidden="true">></div>
+            <div class="value-card__icon" aria-hidden="true">
+              <img src="assets/icons/icon-speed.svg" alt="">
+            </div>
             <div>
               <h3 class="value-card__title">Быстрее процессы</h3>
               <p class="value-card__text">Сценарии и автоматизация убирают лишние задержки и ручной контроль.</p>

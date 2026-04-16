@@ -4,6 +4,17 @@
 
 This file is the working source of truth for all visual assets needed for the website redesign.
 
+---
+
+## Design files
+
+### Pencil макет главной страницы
+
+- Файл: `design-concepts.pen` (в корне проекта, открывается в Pencil Desktop App)
+- Содержит два варианта: V1 светлый (синий, архив) + V2 тёмный premium (актуальный)
+- Статус: **в работе** — базовые секции готовы, нужно добавить кейсы, диагностику, FAQ
+- Актуальная цветовая система: `#C49A8A` (акцент), `#FAF7F5` (фон), `#1A1210` (тёмный/hero)
+
 It helps keep:
 
 - asset structure clean
@@ -62,6 +73,7 @@ Required files:
 
 - `assets/images/hero-visual-main.webp`
 - `assets/images/hero-visual-mobile.webp` (optional but recommended)
+- `assets/images/hero-visual-main.svg` (working source)
 
 Purpose:
 
@@ -70,7 +82,7 @@ Purpose:
 
 Status:
 
-- missing
+- svg source created, webp export still needed
 
 ### 2. Top format icons
 
@@ -86,7 +98,7 @@ Purpose:
 
 Status:
 
-- missing
+- в Pencil-макете используются Lucide-иконки (bot, globe, cpu) — для index.html файлы по-прежнему нужны
 
 ### 3. Value block icons
 
@@ -102,7 +114,7 @@ Purpose:
 
 Status:
 
-- missing
+- в Pencil-макете используются Lucide-иконки (zap, trending-up, timer) — для index.html файлы по-прежнему нужны
 
 ### 4. Task block icons
 
@@ -232,16 +244,19 @@ Status:
 
 Required files:
 
-- `assets/brand/almira.jpg`
-- `assets/brand/almira-portrait-02.jpg` (optional)
+- `assets/brand/almira.jpg` — уже есть, используется в hero__profile
+- `assets/brand/almira-hero.jpg` — **ПРИОРИТЕТ №1** — крупное фото для тёмного hero
 
 Purpose:
 
-- support credibility and make the site feel personal and authored
+- Hero стал тёмным, требует полноценного портретного фото на весь правый блок
+- Без фото hero выглядит незавершённо
 
 Status:
 
-- one source exists in root
+- `almira.jpg` есть в `assets/brand/`
+- `almira-hero.jpg` — нужно сгенерировать через AI (уверенный портрет, тёмный фон, premium)
+- Рекомендуемый формат: вертикальный, 800×1000px+, без лишнего фона
 
 ### 12. Decorative UI assets
 
@@ -280,3 +295,108 @@ Before connecting new visuals into `index.html` or `portfolio.html`:
 - use assets from `assets/`
 - avoid referencing images from scattered project folders when a curated asset exists
 - prefer homepage-optimized covers instead of raw screenshots when possible
+
+---
+
+## Production-ready priority list
+
+This is the practical build order for the next visual stage of the project.
+
+### Phase 1 — critical homepage assets
+
+Must exist before the homepage can feel like a finished product:
+
+1. `assets/images/hero-visual-main.webp`
+2. `assets/icons/icon-bot.svg`
+3. `assets/icons/icon-site.svg`
+4. `assets/icons/icon-ai.svg`
+5. `assets/icons/icon-routine.svg`
+6. `assets/icons/icon-leads.svg`
+7. `assets/icons/icon-speed.svg`
+8. `assets/ui/diagnostics-preview.webp`
+
+### Phase 2 — structural support assets
+
+These make the middle of the page feel more designed and less text-based:
+
+1. `assets/ui/process-visual-overview.webp`
+2. `assets/icons/icon-process-discovery.svg`
+3. `assets/icons/icon-process-format.svg`
+4. `assets/icons/icon-process-structure.svg`
+5. `assets/icons/icon-process-build.svg`
+6. `assets/icons/icon-process-launch.svg`
+7. `assets/icons/icon-scope.svg`
+8. `assets/icons/icon-extra-costs.svg`
+9. `assets/icons/icon-support.svg`
+
+### Phase 3 — polish and scale
+
+These strengthen later passes and other pages:
+
+1. `assets/ui/solution-site-preview.webp`
+2. `assets/ui/solution-bot-preview.webp`
+3. `assets/ui/solution-app-preview.webp`
+4. `assets/ui/solution-ai-preview.webp`
+5. `assets/ui/solution-automation-preview.webp`
+6. `assets/ui/glow-soft-01.webp`
+7. `assets/ui/glow-soft-02.webp`
+8. `assets/ui/panel-floating-01.webp`
+
+---
+
+## Hero visual art direction
+
+Target file:
+
+- `assets/images/hero-visual-main.webp`
+
+Use:
+
+- homepage first screen
+
+Visual goal:
+
+- light product-style composition
+- laptop or desktop screen with UI panels
+- phone screen with bot or app interface
+- floating interface cards
+- calm blue-tech palette
+- premium, clean, clear, modern
+- no neon cyberpunk, no generic AI brain imagery
+
+Composition rules:
+
+- more visual weight on the right side
+- usable negative space for heading and CTA on the left
+- clean white or soft gray background with subtle atmosphere
+- realistic or polished 3D-mockup feeling
+
+Brand fit:
+
+- should feel intelligent and modern
+- should feel feminine through taste and softness, not through decorative sweetness
+- should support trust, clarity, and product thinking
+
+---
+
+## Icon system direction
+
+All homepage icons should follow one system:
+
+- SVG
+- rounded geometric shapes
+- soft blue gradient or two-tone blue palette
+- subtle depth without cheesy 3D
+- friendly but professional
+- readable at small card sizes
+
+Do not mix:
+
+- outline-only icons from one set
+- filled icons from another
+- random colors
+- purple neon AI motifs
+
+Current status:
+
+- first homepage icon set started locally in `assets/icons/`
